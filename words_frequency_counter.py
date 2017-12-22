@@ -12,6 +12,7 @@ def filter_stopwords(word_list_input, stop_words_input):
 
 
 def word_list_to_frequency_dict(word_list_input):
+    # words counting
     word_freq_list = [word_list_input.count(p) for p in word_list_input]
     # by converting to dict, dict will only record the same item and values once
     # Hence prevent repeating pairs of info
