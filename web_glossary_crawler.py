@@ -6,11 +6,10 @@ source_code = requests.get(url)
 code_in_text = source_code.text
 
 # crawling setup
-soup = BeautifulSoup(code_in_text, 'html.parser')
-table = soup.find_all('table')
+soup = BeautifulSoup(code_in_text, 'lxml')  
+tables = soup.find_all('table')
 
-for table in table:
-    for row in table.find_all('tr'):
-        for column in row.find_all('strong'):
-            print(column)
+for table in tables:
+    for row in table.find_all('td', {'style': 'text-align: center;'}):
+        print(row)
 
