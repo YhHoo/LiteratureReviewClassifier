@@ -1,0 +1,392 @@
+a/b testing
+accuracy
+activation function
+adagrad
+algorithm
+angularjs
+area under the roc curve
+artificial intelligence
+auc
+backpropagation
+backpropagation
+baseline
+batch
+batch size
+bayes theorem
+bayes' theorem
+bayesian network
+bayesian statistics
+bias
+bias
+big data
+big data
+binary classification
+binary variable
+binning
+binomial distribution
+binomial distribution
+bucketing
+business analytics
+business intelligence
+calibration layer
+candidate sampling
+categorical data
+categorical variable
+checkpoint
+chi-square test
+class
+class-imbalanced data set
+classification
+classification
+classification model
+classification threshold
+clustering
+clustering
+coefficient
+collaborative filtering
+computational linguistics
+confidence interval
+confidence interval
+confusion matrix
+confusion matrix
+continuous feature
+continuous variable
+continuous variable
+convergence
+convex function
+convex optimization
+convex set
+correlation
+cost
+covariance
+cross-entropy
+cross-validation
+custom estimator
+d3
+data engineer
+data mining
+data mining
+data science
+data science
+data set
+data structure
+data transformation
+data wrangling
+dataset api
+decile
+decision boundary
+decision tree
+decision trees
+deep learning
+deep learning
+deep model
+degree of freedom
+dense feature
+dense layer
+dependent variable
+dependent variable
+derived feature
+descriptive statistics
+dimension reduction
+discrete feature
+discrete variable
+dropout regularization
+dummy variable
+dynamic model
+early stopping
+econometrics
+eda
+embeddings
+empirical risk minimization
+ensemble
+epoch
+estimator
+evaluation metrics
+example
+f-score
+false negative
+false positive
+false positive rate
+feature
+feature
+feature columns
+feature cross
+feature engineering
+feature engineering
+feature reduction
+feature selection
+feature set
+feature spec
+frequentist statistics
+full softmax
+fully connected layer
+gate
+generalization
+generalized linear model
+gradient
+gradient boosting
+gradient clipping
+gradient descent
+gradient descent
+graph
+heuristic
+hidden layer
+hierarchical clustering
+hinge loss
+histogram
+holdout data
+hyperparameter
+hyperplane
+hypothesis
+imputation
+independent variable
+independently and identically distributed
+inference
+inferential statistics
+input function
+input layer
+instance
+inter-rater agreement
+interpretability
+iqr
+iteration
+javascript
+k-means
+k-means clustering
+k-nearest neighbors
+keras
+kernel support vector machines
+knn
+kurtosis
+l1 loss
+l1 regularization
+l2 loss
+l2 regularization
+label
+labeled example
+lambda
+lasso regression
+latent variable
+layer
+layers api
+learning rate
+least squares regression
+lift
+linear algebra
+linear regression
+linear regression
+linear regression
+log loss
+logarithm
+logistic regression
+logistic regression
+logistic regression
+loss
+machine learning
+machine learning
+machine learning
+markov chain
+matlab
+matrix
+mean
+mean
+mean absolute error
+mean squared error
+mean squared error
+median
+median
+metric
+metrics api
+mini-batch
+mini-batch stochastic gradient descent
+ml
+mode
+mode
+model
+model
+model training
+momentum
+monte carlo method
+moving average
+mse
+multi-class classification
+multinomial classification
+multivariate analysis
+n-gram
+naive bayes
+naive bayes classifier
+nan trap
+natural language processing
+negative class
+neural network
+neural network
+neuron
+node
+normal distribution
+normal distribution
+normalization
+nosql
+null hypothesis
+numerical data
+numpy
+objective
+objective function
+offline inference
+one hot encoding
+one-hot encoding
+one-vs.-all
+online inference
+operation
+optimizer
+ordinal variable
+outlier
+outlier
+outliers
+output layer
+overfitting
+overfitting
+p value
+p-value
+pagerank
+pandas
+pandas
+parameter
+parameter server
+parameter update
+partial derivative
+partitioning strategy
+perceptron
+performance
+perl
+perplexity
+pipeline
+pivot table
+poisson distribution
+positive class
+posterior distribution
+pre-made estimator
+pre-trained model
+precision
+precision and recall
+prediction
+prediction bias
+predictive analytics
+predictive modeling
+predictor variable
+principal component analysis
+prior belief
+prior distribution
+probability distribution
+python
+quantile, quartile
+quartile
+queue
+r
+random forest
+range
+rank
+rater
+recall
+rectified linear unit
+regression
+regression
+regression model
+regularization
+regularization rate
+reinforcement learning
+reinforcement learning
+relu
+representation
+response variable
+ridge regression
+roc curve
+roc-auc
+root directory
+root mean squared error
+root mean squared error
+ruby
+s curve
+sas
+savedmodel
+saver
+scalar
+scaling
+scikit-learn
+scripting
+semi-supervised learning
+semi-supervised learning
+sequence model
+serial correlation
+session
+shell
+sigmoid function
+skewness
+softmax
+sparse feature
+spatiotemporal data
+spss
+sql
+squared hinge loss
+squared loss
+standard deviation
+standard deviation
+standard error
+standard normal distribution
+standardized score
+stata
+static model
+stationarity
+statistics
+step
+step size
+stochastic gradient descent
+strata, stratified sampling
+structural risk minimization
+summary
+supervised learning
+supervised learning
+supervised machine learning
+support vector machine
+svm
+synthetic feature
+t-distribution
+t-test
+tableau
+target
+temporal data
+tensor
+tensor processing unit
+tensor rank
+tensor shape
+tensor size
+tensorboard
+tensorflow
+tensorflow playground
+tensorflow serving
+test set
+tf.example
+tf.layers
+time series analysis
+time series data
+training
+training set
+transfer learning
+true negative
+true positive
+true positive rate
+type i error
+type ii error
+uima
+univariate analysis
+unlabeled example
+unsupervised learning
+unsupervised learning
+unsupervised machine learning
+validation set
+variance
+variance
+vector
+vector space
+weight
+weka
+wide model
