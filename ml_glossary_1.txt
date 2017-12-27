@@ -22,7 +22,7 @@ Decile
 Degree of Freedom
 Dummy Variable
 EDA
-Evaluation Metrics`
+Evaluation Metrics
 Feature reduction
 Feature Selection
 Frequentist Statistics

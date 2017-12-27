@@ -1,200 +1,204 @@
- A/B testing
- accuracy
+A/B testing
+accuracy
 activation function
- AdaGrad
- AUC (Area under the ROC Curve)
- backpropagation
- baseline
- batch
- batch size
- bias
- binary classification
- binning
- bucketing
- calibration layer
- candidate sampling
- categorical data
- checkpoint
- class
- class-imbalanced data set
- classification model
- classification threshold
- collaborative filtering
- confusion matrix
- continuous feature
- convergence
- convex function
+AdaGrad
+AUC
+Area under the ROC Curve
+backpropagation
+baseline
+batch
+batch size
+bias
+binary classification
+binning
+bucketing
+calibration layer
+candidate sampling
+categorical data
+checkpoint
+class
+class-imbalanced data set
+classification model
+classification threshold
+collaborative filtering
+confusion matrix
+continuous feature
+convergence
+convex function
 convex optimization
 convex set
- cost
- cross-entropy
- custom Estimator
- data set
- Dataset API (tf.data)
- decision boundary
- dense layer
- deep model
- dense feature
- derived feature
- discrete feature
- dropout regularization
- dynamic model
- early stopping
- embeddings
- empirical risk minimization (ERM)
- ensemble
- epoch
- Estimator
- example
- false negative (FN)
- false positive (FP)
- false positive rate (FP rate)
- feature
- feature columns (FeatureColumns)
- feature cross
- feature engineering
- feature set
- feature spec
- full softmax
- fully connected layer
- generalization
- generalized linear model
- gradient
- gradient clipping
- gradient descent
- graph
- heuristic
- hidden layer
- hinge loss
- holdout data
- hyperparameter
- hyperplane
-independently and identically distributed (i.i.d)
- inference
- input function
- input layer
- instance
- interpretability
- inter-rater agreement
- iteration
- Keras
-Kernel Support Vector Machines (KSVMs)
- L1 loss
- L1 regularization
- L2 loss
- L2 regularization
- label
- labeled example
- lambda
- layer
- Layers API (tf.layers)
- learning rate
- least squares regression
- linear regression
- logistic regression
- Log Loss
- loss
- machine learning
- Mean Squared Error (MSE)
- metric
- Metrics API (tf.metrics)
- mini-batch
- mini-batch stochastic gradient descent (SGD)
- ML
- model
- model training
- Momentum
- multi-class classification
- multinomial classification
- NaN trap
- negative class
- neural network
- neuron
- node
- normalization
- numerical data
- numpy
- objective
- offline inference
- one-hot encoding
- one-vs.-all
- online inference
- Operation (op)
- optimizer
- outliers
- output layer
- overfitting
- pandas
- parameter
- Parameter Server (PS)
- parameter update
- partial derivative
- partitioning strategy
- performance
- perplexity
- pipeline
- positive class
- precision
- prediction
- prediction bias
- pre-made Estimator
- pre-trained model
- prior belief
- queue
- rank
- rater
- recall
- Rectified Linear Unit (ReLU)
- regression model
- regularization
- regularization rate
- representation
- ROC (receiver operating characteristic) Curve
- root directory
- Root Mean Squared Error (RMSE)
- SavedModel
- Saver
- scaling
- scikit-learn
- semi-supervised learning
- sequence model
- session
- sigmoid function
- softmax
- sparse feature
- squared hinge loss
- squared loss
- static model
- stationarity
- step
- step size
- stochastic gradient descent (SGD)
- structural risk minimization (SRM)
- summary
- supervised machine learning
- synthetic feature
- target
- temporal data
- Tensor
- Tensor Processing Unit (TPU)
- Tensor rank
- Tensor shape
- Tensor size
- TensorBoard
- TensorFlow
- TensorFlow Playground
- TensorFlow Serving
- test set
- tf.Example
- time series analysis
- training
- training set
- transfer learning
- true negative (TN)
- true positive (TP)
- true positive rate (TP rate)
- unlabeled example
- unsupervised machine learning
- validation set
- weight
- wide model
+cost
+cross-entropy
+custom Estimator
+data set
+Dataset API
+decision boundary
+dense layer
+deep model
+dense feature
+derived feature
+discrete feature
+dropout regularization
+dynamic model
+early stopping
+embeddings
+empirical risk minimization
+ensemble
+epoch
+Estimator
+example
+false negative
+false positive
+false positive rate
+feature
+feature columns
+feature cross
+feature engineering
+feature set
+feature spec
+full softmax
+fully connected layer
+generalization
+generalized linear model
+gradient
+gradient clipping
+gradient descent
+graph
+heuristic
+hidden layer
+hinge loss
+holdout data
+hyperparameter
+hyperplane
+independently and identically distributed
+inference
+input function
+input layer
+instance
+interpretability
+inter-rater agreement
+iteration
+Keras
+Kernel Support Vector Machines
+L1 loss
+L1 regularization
+L2 loss
+L2 regularization
+label
+labeled example
+lambda
+layer
+Layers API
+tf.layers
+learning rate
+least squares regression
+linear regression
+logistic regression
+Log Loss
+loss
+machine learning
+Mean Squared Error
+MSE
+metric
+Metrics API
+mini-batch
+mini-batch stochastic gradient descent
+ML
+model
+model training
+Momentum
+multi-class classification
+multinomial classification
+NaN trap
+negative class
+neural network
+neuron
+node
+normalization
+numerical data
+numpy
+objective
+offline inference
+one-hot encoding
+one-vs.-all
+online inference
+Operation
+optimizer
+outliers
+output layer
+overfitting
+pandas
+parameter
+Parameter Server
+parameter update
+partial derivative
+partitioning strategy
+performance
+perplexity
+pipeline
+positive class
+precision
+prediction
+prediction bias
+pre-made Estimator
+pre-trained model
+prior belief
+queue
+rank
+rater
+recall
+Rectified Linear Unit
+ReLU
+regression model
+regularization
+regularization rate
+representation
+ROC Curve
+root directory
+Root Mean Squared Error
+SavedModel
+Saver
+scaling
+scikit-learn
+semi-supervised learning
+sequence model
+session
+sigmoid function
+softmax
+sparse feature
+squared hinge loss
+squared loss
+static model
+stationarity
+step
+step size
+stochastic gradient descent
+structural risk minimization
+summary
+supervised machine learning
+synthetic feature
+target
+temporal data
+Tensor
+Tensor Processing Unit
+Tensor rank
+Tensor shape
+Tensor size
+TensorBoard
+TensorFlow
+TensorFlow Playground
+TensorFlow Serving
+test set
+tf.Example
+time series analysis
+training
+training set
+transfer learning
+true negative
+true positive
+true positive rate
+unlabeled example
+unsupervised machine learning
+validation set
+weight
+wide model
