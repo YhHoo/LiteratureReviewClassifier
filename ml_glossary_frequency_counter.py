@@ -1,16 +1,27 @@
-
-def specific_counter():
-    pdf = 'Today Jackson is attending the meeting at Traders hotel'
-    wanted = 'traders hotel'
-
-    # lowercase every word in pdf text
-    if wanted in pdf.lower():
-        print('FOUND !')
-    else:
-        print('NOT FOUND =(')
+import numpy as np
+import matplotlib.pyplot as plt
+import PyPDF2
+import re
 
 
-def glossary_database():
+def glossary_counter(glossary, pdf_string, visualize=False):
+    database = []
+    with open(glossary, 'r') as f:
+        for word in f:
+            database.append(word)
+    # create another list of '0' with the same length as database
+    frequency = np.zeros(len(database))
+    # counts f of every word and store the freq to frequency of corresponding position
+    for word in database:
+        word_freq = pdf_string.count(word)
+        frequency[database.index(word)] += word_freq
+
+    if visualize:
+        plt.plot(database, frequency)
+
+
+# groups all mini glossaries of txt and save in a new txt
+def glossary_database_accumulate():
     # extract all words from all mini glossaries
     mini_glossary = ['ml_glossary_1.txt', 'ml_glossary_2.txt', 'ml_glossary_3.txt']
     temp = []
@@ -30,5 +41,14 @@ def glossary_database():
             f.write(word)
     print('Saving Completed !')
 
-glossary_database()
 
+# temporary for testing the pdf miner
+pdf_filename = 'journal_test.pdf'
+pdf_file_obj = open(pdf_filename, 'rb')
+pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
+page_obj = pdf_reader.getPage(1)
+# convert to text
+text = page_obj.extractText()
+# remove some characters
+text = re.sub('[({[\])]', '', text)
+print(text)
