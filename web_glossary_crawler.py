@@ -1,3 +1,8 @@
+# --------------------[Web Crawler 1]------------------------------
+# This script is just to crawl all the glossary from the website of
+# https://www.analyticsvidhya.com/glossary-of-common-statistics-and-machine-learning-terms/
+# to used in analyzing the pdf.
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -18,6 +23,7 @@ tables = soup.find_all('table')
 # iterate through all tables tag and do:
 for table in tables:
     for row in table.find_all('tr'):
+        # parse only first column
         column = row.find('td')
         if column:
             for bold_text in column.find_all('strong'):
@@ -25,7 +31,11 @@ for table in tables:
                 print(info)
                 glossary.append(info.rstrip())  # remove the trailing char like \n
 
-print(glossary)
+with open('ml_glossary_1.txt', 'w') as f:
+    for word in glossary:
+        f.write(word + '\n')
+
+print('Glossary Extraction Completed !\n', glossary)
 
 
 

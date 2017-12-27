@@ -1,0 +1,74 @@
+Bayes Theorem
+Bayesian Statistics
+Big Data
+Binary Variable
+Binomial Distribution
+Business Analytics
+Business Intelligence
+Categorical Variable
+Classification
+Clustering
+Confidence Interval
+Confusion Matrix
+Continuous Variable
+Data Mining
+Data Science
+Data Transformation
+Decision Tree
+Deep Learning
+Descriptive Statistics
+Dependent Variable
+Decile
+Degree of Freedom
+Dummy Variable
+EDA
+Evaluation Metrics`
+Feature reduction
+Feature Selection
+Frequentist Statistics
+F-Score
+Hierarchical Clustering
+Hypothesis
+Imputation
+Inferential Statistics
+IQR
+K-Means
+kNN
+Kurtosis
+Lasso Regression
+Linear Regression
+Logistic Regression
+Machine learning
+Mean
+Median
+Mode
+Multivariate analysis
+Naive Bayes
+Natural Language Processing
+Normal Distribution
+One Hot Encoding
+Ordinal Variable
+Outlier
+Precision and Recall
+Predictor Variable
+P-Value
+Quartile
+Range
+Regression
+Reinforcement Learning
+Response Variable
+Ridge Regression
+ROC-AUC
+Semi-Supervised Learning
+Skewness
+Standard Deviation
+Standard error
+Statistics
+Supervised Learning
+SVM
+Type I error
+Type II error
+T-Test
+Univariate Analysis
+Unsupervised Learning
+Variance
