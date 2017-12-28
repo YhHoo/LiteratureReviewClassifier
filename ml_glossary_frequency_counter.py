@@ -1,6 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import PyPDF2
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.pdfpage import PDFPage
+from pdfminer.converter import TextConverter
+from pdfminer.layout import LAParams
+from io import BytesIO, StringIO
 import re
 
 
@@ -42,13 +47,45 @@ def glossary_database_accumulate():
     print('Saving Completed !')
 
 
-# temporary for testing the pdf miner
-pdf_filename = 'journal_test.pdf'
-pdf_file_obj = open(pdf_filename, 'rb')
-pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
-page_obj = pdf_reader.getPage(1)
-# convert to text
-text = page_obj.extractText()
+# PyPDF2
+def pdf_to_text_pypdf2(filename):
+    # temporary for testing the pdf miner
+    pdf_filename = filename
+    pdf_file_obj = open(pdf_filename, 'rb')
+    pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
+    page_obj = pdf_reader.getPage(1)
+    # convert to text
+    text = page_obj.extractText()
+    return text
+
+
+# Pdf Miner
+def pdf_to_text_pdfminer(filename):
+    pdf_filename = filename
+    # PDFMiner boilerplate
+    rsrcmgr = PDFResourceManager()
+    sio = StringIO()
+    codec = 'utf-8'
+    laparams = LAParams()
+    device = TextConverter(rsrcmgr, sio, codec=codec, laparams=laparams)
+    interpreter = PDFPageInterpreter(rsrcmgr, device)
+
+    # extract text
+    with open(pdf_filename, 'rb') as fp:
+        for page in PDFPage.get_pages(fp):
+            interpreter.process_page(page)
+
+    # get text from ByteIO
+    text = sio.getvalue()
+
+    # close
+    device.close()
+    sio.close()
+
+    return text
+
+
+pdf_text = pdf_to_text_pdfminer(filename='journal_test.pdf')
 # remove some characters
-text = re.sub('[({[\])]', '', text)
-print(text)
+pdf_text = re.sub('[({[\]),.\-;:]', '', pdf_text)
+print(pdf_text)
