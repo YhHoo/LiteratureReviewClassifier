@@ -8,7 +8,6 @@ area under the roc curve
 artificial intelligence
 auc
 backpropagation
-backpropagation
 baseline
 batch
 batch size
@@ -17,13 +16,10 @@ bayes' theorem
 bayesian network
 bayesian statistics
 bias
-bias
-big data
 big data
 binary classification
 binary variable
 binning
-binomial distribution
 binomial distribution
 bucketing
 business analytics
@@ -37,20 +33,15 @@ chi-square test
 class
 class-imbalanced data set
 classification
-classification
 classification model
 classification threshold
-clustering
 clustering
 coefficient
 collaborative filtering
 computational linguistics
 confidence interval
-confidence interval
-confusion matrix
 confusion matrix
 continuous feature
-continuous variable
 continuous variable
 convergence
 convex function
@@ -65,8 +56,6 @@ custom estimator
 d3
 data engineer
 data mining
-data mining
-data science
 data science
 data set
 data structure
@@ -78,12 +67,10 @@ decision boundary
 decision tree
 decision trees
 deep learning
-deep learning
 deep model
 degree of freedom
 dense feature
 dense layer
-dependent variable
 dependent variable
 derived feature
 descriptive statistics
@@ -108,10 +95,8 @@ false negative
 false positive
 false positive rate
 feature
-feature
 feature columns
 feature cross
-feature engineering
 feature engineering
 feature reduction
 feature selection
@@ -126,7 +111,6 @@ generalized linear model
 gradient
 gradient boosting
 gradient clipping
-gradient descent
 gradient descent
 graph
 heuristic
@@ -174,26 +158,17 @@ least squares regression
 lift
 linear algebra
 linear regression
-linear regression
-linear regression
 log loss
 logarithm
 logistic regression
-logistic regression
-logistic regression
 loss
-machine learning
-machine learning
 machine learning
 markov chain
 matlab
 matrix
 mean
-mean
 mean absolute error
 mean squared error
-mean squared error
-median
 median
 metric
 metrics api
@@ -201,8 +176,6 @@ mini-batch
 mini-batch stochastic gradient descent
 ml
 mode
-mode
-model
 model
 model training
 momentum
@@ -223,7 +196,6 @@ neural network
 neuron
 node
 normal distribution
-normal distribution
 normalization
 nosql
 null hypothesis
@@ -234,21 +206,17 @@ objective function
 offline inference
 one hot encoding
 one-hot encoding
-one-vs.-all
+one-vs-all
 online inference
 operation
 optimizer
 ordinal variable
 outlier
-outlier
 outliers
 output layer
 overfitting
-overfitting
-p value
 p-value
 pagerank
-pandas
 pandas
 parameter
 parameter server
@@ -289,11 +257,9 @@ rater
 recall
 rectified linear unit
 regression
-regression
 regression model
 regularization
 regularization rate
-reinforcement learning
 reinforcement learning
 relu
 representation
@@ -302,7 +268,6 @@ ridge regression
 roc curve
 roc-auc
 root directory
-root mean squared error
 root mean squared error
 ruby
 s curve
@@ -313,7 +278,6 @@ scalar
 scaling
 scikit-learn
 scripting
-semi-supervised learning
 semi-supervised learning
 sequence model
 serial correlation
@@ -329,7 +293,6 @@ sql
 squared hinge loss
 squared loss
 standard deviation
-standard deviation
 standard error
 standard normal distribution
 standardized score
@@ -343,7 +306,6 @@ stochastic gradient descent
 strata, stratified sampling
 structural risk minimization
 summary
-supervised learning
 supervised learning
 supervised machine learning
 support vector machine
@@ -379,7 +341,6 @@ type ii error
 uima
 univariate analysis
 unlabeled example
-unsupervised learning
 unsupervised learning
 unsupervised machine learning
 validation set
