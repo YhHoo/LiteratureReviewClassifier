@@ -29,7 +29,7 @@ def glossary_database_accumulate():
     print('Saving Completed !')
 
 
-# PyPDF2
+# PyPDF2[not really works]
 def pdf_to_text_pypdf2(filename):
     # Retrieved fr:
     # https://stackoverflow.com/questions/32667398/best-tool-for-text-extraction-from-pdf-in-python-3-4
@@ -79,22 +79,28 @@ def glossary_counter(glossary, pdf_string, visualize=False):
     database = []
     with open(glossary, 'r') as f:
         for word in f:
-            database.append(word)
-    # create another list of '0' with the same length as database
-    frequency = np.zeros(len(database))
+            database.append(word.rstrip())  # discharge the '\n'
+    # create another list of '0' as int with the same length as database
+    frequency = [0] * len(database)
     # counts f of every word and store the freq to frequency of corresponding position
     for word in database:
         word_freq = pdf_string.count(word)
         frequency[database.index(word)] += word_freq
-
+    # summarize to a dict
+    spectrum = dict(zip(database, frequency))
+    print('ML Glossary Spectrums: ', spectrum)
+    # plot a histogram
     if visualize:
-        plt.plot(database, frequency)
+        plt.plot(database, frequency, 'x')
+        plt.show()
 
 
 # pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
 # print(pdf_text)
 
-
+# control string for debugging
 s = 'ANN ANN bayesian statistics is the bayesian statistics and convergence, ' \
-    'hence convergence thus discrete variable'
+    'hence convergence thus discrete variable activation function hence activation function'
 
+pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
+glossary_counter('ml_glossary_all.txt', pdf_string=pdf_text, visualize=False)
