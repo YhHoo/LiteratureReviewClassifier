@@ -9,7 +9,7 @@ from io import StringIO
 import re
 
 
-# groups all mini glossaries of txt and save in a new txt
+# group all ml_glossary_1, _2, _3.txt and save in a new txt
 def glossary_database_accumulate():
     # extract all words from all mini glossaries
     mini_glossary = ['ml_glossary_1.txt', 'ml_glossary_2.txt', 'ml_glossary_3.txt']
@@ -29,22 +29,6 @@ def glossary_database_accumulate():
     print('Saving Completed !')
 
 
-def glossary_counter(glossary, pdf_string, visualize=False):
-    database = []
-    with open(glossary, 'r') as f:
-        for word in f:
-            database.append(word)
-    # create another list of '0' with the same length as database
-    frequency = np.zeros(len(database))
-    # counts f of every word and store the freq to frequency of corresponding position
-    for word in database:
-        word_freq = pdf_string.count(word)
-        frequency[database.index(word)] += word_freq
-
-    if visualize:
-        plt.plot(database, frequency)
-
-
 # PyPDF2
 def pdf_to_text_pypdf2(filename):
     # Retrieved fr:
@@ -58,7 +42,7 @@ def pdf_to_text_pypdf2(filename):
     return text
 
 
-# Pdf Miner
+# Pdf Miner that extract .pdf as string, remove all unwanted char and returned
 def pdf_to_text_pdfminer(filename, char_filter=False):
     pdf_filename = filename
     # PDFMiner boilerplate
@@ -88,6 +72,23 @@ def pdf_to_text_pdfminer(filename, char_filter=False):
         text = re.sub('-\n', '', text)
     # return in string
     return text
+
+
+# count the keywords of ML from the input processed string of .pdf and return a dict of {'word':freq}
+def glossary_counter(glossary, pdf_string, visualize=False):
+    database = []
+    with open(glossary, 'r') as f:
+        for word in f:
+            database.append(word)
+    # create another list of '0' with the same length as database
+    frequency = np.zeros(len(database))
+    # counts f of every word and store the freq to frequency of corresponding position
+    for word in database:
+        word_freq = pdf_string.count(word)
+        frequency[database.index(word)] += word_freq
+
+    if visualize:
+        plt.plot(database, frequency)
 
 
 # pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)

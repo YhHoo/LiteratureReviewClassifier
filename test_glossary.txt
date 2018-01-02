@@ -1,0 +1,8 @@
+a/b testing
+accuracy
+activation function
+adagrad
+algorithm
+angularjs
+area under the roc curve
+artificial intelligence
