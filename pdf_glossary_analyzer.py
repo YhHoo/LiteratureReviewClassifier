@@ -105,8 +105,8 @@ def glossary_counter(glossary, pdf_string, visualize=False):
         plt.savefig(fname='spectrum.jpg')
 
 
-# pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
-# glossary_counter('ml_glossary_all.txt', pdf_string=pdf_text, visualize=False)
+pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
+glossary_counter('ml_glossary_all.txt', pdf_string=pdf_text, visualize=False)
 
 
 # control string for debugging
@@ -115,4 +115,5 @@ s = 'ANN ANN bayesian statistics is the bayesian statistics and convergence, ' \
 
 # StatusRecords[2 Jan, 6pm]
 # -> the 'r' will be counted as 2 from 'rigorous' which supposed to be 0.
+# -> 'model' also counted by 'mode'
 # Suggestion -> need to split() the string into single words only do the '==' counting
