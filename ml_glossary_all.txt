@@ -192,7 +192,6 @@ nan trap
 natural language processing
 negative class
 neural network
-neural network
 neuron
 node
 normal distribution
@@ -204,7 +203,6 @@ numpy
 objective
 objective function
 offline inference
-one hot encoding
 one-hot encoding
 one-vs-all
 online inference
@@ -246,7 +244,8 @@ prior belief
 prior distribution
 probability distribution
 python
-quantile, quartile
+quantile
+quartile
 quartile
 queue
 r
@@ -265,12 +264,12 @@ relu
 representation
 response variable
 ridge regression
-roc curve
+roc-curve
 roc-auc
 root directory
 root mean squared error
 ruby
-s curve
+s-curve
 sas
 savedmodel
 saver
@@ -303,7 +302,8 @@ statistics
 step
 step size
 stochastic gradient descent
-strata, stratified sampling
+strata
+stratified sampling
 structural risk minimization
 summary
 supervised learning

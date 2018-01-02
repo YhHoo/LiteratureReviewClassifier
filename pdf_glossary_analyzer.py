@@ -90,6 +90,10 @@ def pdf_to_text_pdfminer(filename, char_filter=False):
     return text
 
 
-pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
-print(pdf_text)
+# pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
+# print(pdf_text)
+
+
+s = 'ANN ANN bayesian statistics is the bayesian statistics and convergence, ' \
+    'hence convergence thus discrete variable'
 
