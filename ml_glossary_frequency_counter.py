@@ -79,11 +79,17 @@ def pdf_to_text_pdfminer(filename, char_filter=False):
     sio.close()
     # char filter
     if char_filter:
-        # remove all char inside []
-        text = re.sub('[({[\])’‘,.;:]', '', text)
+        # remove all char specified inside first '' of re.sub()
+        # Note that use of '[]' will treat each char inside as a separate single char, e.g.
+        # '[(@]' will replace '(' and '@'
+        # While without the use of [] list, a string of char inside '' will be treated as entity, e.g.
+        # '(@' will replace '(@' only and not single '(' and '@'
+        text = re.sub('[({[\])’*‘,.;:]', '', text)
+        text = re.sub('-\n', '', text)
     # return in string
     return text
 
 
 pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
 print(pdf_text)
+
