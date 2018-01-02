@@ -105,13 +105,29 @@ def glossary_counter(glossary, pdf_string, visualize=False):
         plt.savefig(fname='spectrum.jpg')
 
 
-pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
-glossary_counter('ml_glossary_all.txt', pdf_string=pdf_text, visualize=False)
+# do the work
+# pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
+# glossary_counter('ml_glossary_all.txt', pdf_string=pdf_text, visualize=False)
 
 
 # control string for debugging
-s = 'ANN ANN bayesian statistics is the bayesian statistics and convergence, ' \
-    'hence convergence thus discrete variable activation function hence activation function'
+s1 = 'ANN ANN bayesian statistics is the bayesian statistics and convergence, ' \
+     'hence convergence thus discrete variable activation function hence activation function bla bla sjd'
+s_split = s1.split()  # list
+print(s_split)
+phrase_len = 2
+counter = 0
+for i in range(len(s_split) - phrase_len + 1):
+    if s_split[i] == 'activation':
+        if s_split[i+1] == 'function':
+            counter += 1
+print(counter)
+
+
+
+
+
+
 
 # StatusRecords[2 Jan, 6pm]
 # -> the 'r' will be counted as 2 from 'rigorous' which supposed to be 0.
