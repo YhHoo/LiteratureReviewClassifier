@@ -1,3 +1,10 @@
+# -----------------[OVERALL]------------------
+# This py will compile all mini glossaries into a big one,
+# convert the pdf as string and remove those unwanted char
+# then do the counting and sorting to produce a spectrum of
+# ML glossaries and frequencies
+# imported files: words_frequency_counter.py + ml_glossary_all.txt
+
 import numpy as np
 import matplotlib.pyplot as plt
 import PyPDF2
@@ -7,6 +14,7 @@ from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from io import StringIO
 import re
+import words_frequency_counter as wfc
 
 
 # group all ml_glossary_1, _2, _3.txt and save in a new txt
@@ -88,19 +96,23 @@ def glossary_counter(glossary, pdf_string, visualize=False):
         frequency[database.index(word)] += word_freq
     # summarize to a dict
     spectrum = dict(zip(database, frequency))
-    print('ML Glossary Spectrums: ', spectrum)
+    sorted_spectrum = wfc.sort_from_highest(spectrum)
+    print('ML Glossary Spectrums: ', sorted_spectrum)
     # plot a histogram
     if visualize:
         plt.plot(database, frequency, 'x')
         plt.show()
+        plt.savefig(fname='spectrum.jpg')
 
 
 # pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
-# print(pdf_text)
+# glossary_counter('ml_glossary_all.txt', pdf_string=pdf_text, visualize=False)
+
 
 # control string for debugging
 s = 'ANN ANN bayesian statistics is the bayesian statistics and convergence, ' \
     'hence convergence thus discrete variable activation function hence activation function'
 
-pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
-glossary_counter('ml_glossary_all.txt', pdf_string=pdf_text, visualize=False)
+# StatusRecords[2 Jan, 6pm]
+# -> the 'r' will be counted as 2 from 'rigorous' which supposed to be 0.
+# Suggestion -> need to split() the string into single words only do the '==' counting

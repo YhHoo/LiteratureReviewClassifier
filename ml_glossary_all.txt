@@ -248,7 +248,6 @@ quantile
 quartile
 quartile
 queue
-r
 random forest
 range
 rank
