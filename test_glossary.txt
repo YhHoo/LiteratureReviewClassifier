@@ -1,8 +1,4 @@
-a/b testing
-accuracy
+bayesian bla bla statistics xxx xxx
 activation function
-adagrad
-algorithm
-angularjs
-area under the roc curve
-artificial intelligence
+titanium
+ann

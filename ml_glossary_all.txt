@@ -3,6 +3,7 @@ accuracy
 activation function
 adagrad
 algorithm
+ann
 angularjs
 area under the roc curve
 artificial intelligence
@@ -124,7 +125,6 @@ hyperplane
 hypothesis
 imputation
 independent variable
-independently and identically distributed
 inference
 inferential statistics
 input function

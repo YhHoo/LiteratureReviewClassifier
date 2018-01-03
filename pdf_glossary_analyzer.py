@@ -3,7 +3,7 @@
 # convert the pdf as string and remove those unwanted char
 # then do the counting and sorting to produce a spectrum of
 # ML glossaries and frequencies
-# imported files: words_frequency_counter.py + ml_glossary_all.txt
+# imported files: words_counter_utils.py + ml_glossary_all.txt
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,10 +14,11 @@ from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from io import StringIO
 import re
+# my own library
 from word_counter_utils import sort_from_highest
 
 
-# group all ml_glossary_1, _2, _3.txt and save in a new txt
+# group all ml_glossary_1, _2, _3.txt, convert to lowercase and save in a new txt
 def glossary_database_accumulate():
     # extract all words from all mini glossaries
     mini_glossary = ['ml_glossary_1.txt', 'ml_glossary_2.txt', 'ml_glossary_3.txt']
@@ -78,8 +79,8 @@ def pdf_to_text_pdfminer(filename, char_filter=False):
         # '(@' will replace '(@' only and not single '(' and '@'
         text = re.sub('[({[\])’*‘,.;:]', '', text)
         text = re.sub('-\n', '', text)
-    # return in string
-    return text
+    # return in string in lower case
+    return text.lower()
 
 
 # count the keywords of ML from the input processed string of .pdf and return a dict of {'word':freq}
@@ -116,19 +117,41 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False):
     # create another list of '0' as int with the same length as database
     frequency = [0] * len(database)
     pdf_string_split = pdf_string.split()
-    # for each 2- or more-words-terms inside the glossary, it is split into a list of single word
+    # iteration for every phrase in database
     for i in range(len(database)):
+        counter = 0  # for f of each keywords
         phrase = database[i].split()
+        # iteration through every word in pdf_string_split
+        for j in range(len(pdf_string_split) - len(phrase) + 1):
+            match_flag = 1
+            # iterate thru word by word in the phrase
+            for k in range(len(phrase)):
+                # if encounter one unmatched this loop will break
+                if pdf_string_split[j + k] == phrase[k]:
+                    # do this if first and subsequent words match
+                    continue
+                # do the following whenever 1 unmatch detected
+                match_flag = 0
+                break
+            counter += match_flag
+        frequency[i] += counter
+    spectrum = dict(zip(database, frequency))  # dict
+    # sort from highest frequency to lowest, returned in list of tuples
+    f_sorted_spectrum = sort_from_highest(spectrum)  # list of tuples
+    print('SPECTRUM: ', f_sorted_spectrum)
 
 
 # do the work
+# PDF Extraction as string and remove unwanted char
 pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
-print(pdf_text.split())
-# glossary_counter_method_2('ml_glossary_all.txt', pdf_string=pdf_text, visualize=False)
+# do the counting for specific phrase
+glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
+                          pdf_string=pdf_text,
+                          visualize=False)
 
 
 # control string for debugging
-# s1 = 'ANN ANN bayesian statistics is the bayesian statistics and convergence, ' \
+# s1 = 'ann ann bayesian bla bla statistics xxx xxx is the bayesian bla bla statistics xxx xxx and convergence ' \
 #      'hence convergence thus discrete hence variable activation function hence activation function bla bla sjd'
 # s_split = s1.split()  # list
 # print(s_split)
@@ -139,11 +162,6 @@ print(pdf_text.split())
 #         if s_split[i+1] == 'function':
 #             counter += 1
 # print(counter)
-
-
-
-
-
 
 
 # StatusRecords[2 Jan, 6pm]
