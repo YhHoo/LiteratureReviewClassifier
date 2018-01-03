@@ -38,7 +38,7 @@ def glossary_database_accumulate():
     print('Saving Completed !')
 
 
-# PyPDF2[not really works]
+# PyPDF2[works with unsolved bugs, use pdfminer instead]
 def pdf_to_text_pypdf2(filename):
     # Retrieved fr:
     # https://stackoverflow.com/questions/32667398/best-tool-for-text-extraction-from-pdf-in-python-3-4
@@ -108,7 +108,35 @@ def glossary_counter_method_1(glossary_filename, pdf_string, visualize=False):
         plt.savefig(fname='spectrum.jpg')
 
 
-# this methods will split the words down to single word den only do the comparison
+# plot a horizontal bar chart
+def horizontal_bar_chart(sorted_spectrum, threshold=0):
+    threshold = threshold
+    # take only the tuples if the frequency is greater than 'threshold'
+    sorted_spectrum_without_zero = [pair for pair in sorted_spectrum if pair[0] > threshold]
+    # x is the one glossary that will appear on y-axis, while y is the freq
+    y, x = zip(*sorted_spectrum_without_zero)
+    x_pos = np.arange(len(x))
+    plt.rcdefaults()
+    fig, ax = plt.subplots()
+    # create bar chart horizontal
+    ax.barh(x_pos,
+            y,
+            align='center',
+            color='green',
+            ecolor='black')
+    # make the words align with the bars
+    ax.set_yticks(x_pos)
+    # label the words on the y-axis
+    ax.set_yticklabels(x)
+    # labels read from top to bottom
+    ax.invert_yaxis()
+    # labeling of titles
+    ax.set_xlabel('Frequency of Appearance')
+    ax.set_title('Machine Learning Glossary Spectrum')
+    plt.show()
+
+
+# this methods will split() the words down to single word den only do the comparison
 def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False):
     database = []
     with open(glossary_filename, 'r') as f:
@@ -130,7 +158,7 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False):
                 if pdf_string_split[j + k] == phrase[k]:
                     # do this if first and subsequent words match
                     continue
-                # do the following whenever 1 unmatch detected
+                # do the following whenever 1 unmatched detected
                 match_flag = 0
                 break
             counter += match_flag
@@ -140,6 +168,10 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False):
     f_sorted_spectrum = sort_from_highest(spectrum)  # list of tuples
     print('SPECTRUM: ', f_sorted_spectrum)
 
+    # visualize
+    if visualize:
+        horizontal_bar_chart(sorted_spectrum=f_sorted_spectrum, threshold=0)
+
 
 # do the work
 # PDF Extraction as string and remove unwanted char
@@ -147,7 +179,7 @@ pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filte
 # do the counting for specific phrase
 glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
                           pdf_string=pdf_text,
-                          visualize=False)
+                          visualize=True)
 
 
 # StatusRecords[2 Jan, 6pm]
