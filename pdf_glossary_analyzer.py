@@ -150,21 +150,12 @@ glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
                           visualize=False)
 
 
-# control string for debugging
-# s1 = 'ann ann bayesian bla bla statistics xxx xxx is the bayesian bla bla statistics xxx xxx and convergence ' \
-#      'hence convergence thus discrete hence variable activation function hence activation function bla bla sjd'
-# s_split = s1.split()  # list
-# print(s_split)
-# phrase_len = 2
-# counter = 0
-# for i in range(len(s_split) - phrase_len + 1):
-#     if s_split[i] == 'activation':
-#         if s_split[i+1] == 'function':
-#             counter += 1
-# print(counter)
-
-
 # StatusRecords[2 Jan, 6pm]
 # -> the 'r' will be counted as 2 from 'rigorous' which supposed to be 0.
 # -> 'model' also counted by 'mode'
 # Suggestion -> need to split() the string into single words only do the '==' counting
+#
+# StatusRecords[3 Jan, 5pm]
+# -> successfully added glossary_counter_method_2() that split the words first before counting
+# -> e.g. 'r' is no longer counted from 'right'
+# Suggestion -> add the root word converter so that statistic & statistics treated as same thing
