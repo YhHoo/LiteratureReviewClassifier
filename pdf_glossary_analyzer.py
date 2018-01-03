@@ -14,7 +14,7 @@ from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from io import StringIO
 import re
-import words_frequency_counter as wfc
+from word_counter_utils import sort_from_highest
 
 
 # group all ml_glossary_1, _2, _3.txt and save in a new txt
@@ -83,9 +83,10 @@ def pdf_to_text_pdfminer(filename, char_filter=False):
 
 
 # count the keywords of ML from the input processed string of .pdf and return a dict of {'word':freq}
-def glossary_counter(glossary, pdf_string, visualize=False):
+# this method will directly count from entire string without splitting
+def glossary_counter_method_1(glossary_filename, pdf_string, visualize=False):
     database = []
-    with open(glossary, 'r') as f:
+    with open(glossary_filename, 'r') as f:
         for word in f:
             database.append(word.rstrip())  # discharge the '\n'
     # create another list of '0' as int with the same length as database
@@ -96,8 +97,9 @@ def glossary_counter(glossary, pdf_string, visualize=False):
         frequency[database.index(word)] += word_freq
     # summarize to a dict
     spectrum = dict(zip(database, frequency))
-    sorted_spectrum = wfc.sort_from_highest(spectrum)
+    sorted_spectrum = sort_from_highest(spectrum)
     print('ML Glossary Spectrums: ', sorted_spectrum)
+
     # plot a histogram
     if visualize:
         plt.plot(database, frequency, 'x')
@@ -105,23 +107,38 @@ def glossary_counter(glossary, pdf_string, visualize=False):
         plt.savefig(fname='spectrum.jpg')
 
 
+# this methods will split the words down to single word den only do the comparison
+def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False):
+    database = []
+    with open(glossary_filename, 'r') as f:
+        for word in f:
+            database.append(word.rstrip())  # discharge the '\n'
+    # create another list of '0' as int with the same length as database
+    frequency = [0] * len(database)
+    pdf_string_split = pdf_string.split()
+    # for each 2- or more-words-terms inside the glossary, it is split into a list of single word
+    for i in range(len(database)):
+        phrase = database[i].split()
+
+
 # do the work
-# pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
-# glossary_counter('ml_glossary_all.txt', pdf_string=pdf_text, visualize=False)
+pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
+print(pdf_text.split())
+# glossary_counter_method_2('ml_glossary_all.txt', pdf_string=pdf_text, visualize=False)
 
 
 # control string for debugging
-s1 = 'ANN ANN bayesian statistics is the bayesian statistics and convergence, ' \
-     'hence convergence thus discrete variable activation function hence activation function bla bla sjd'
-s_split = s1.split()  # list
-print(s_split)
-phrase_len = 2
-counter = 0
-for i in range(len(s_split) - phrase_len + 1):
-    if s_split[i] == 'activation':
-        if s_split[i+1] == 'function':
-            counter += 1
-print(counter)
+# s1 = 'ANN ANN bayesian statistics is the bayesian statistics and convergence, ' \
+#      'hence convergence thus discrete hence variable activation function hence activation function bla bla sjd'
+# s_split = s1.split()  # list
+# print(s_split)
+# phrase_len = 2
+# counter = 0
+# for i in range(len(s_split) - phrase_len + 1):
+#     if s_split[i] == 'activation':
+#         if s_split[i+1] == 'function':
+#             counter += 1
+# print(counter)
 
 
 
