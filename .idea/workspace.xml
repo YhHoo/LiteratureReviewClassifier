@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17997a68-1c85-4d35-9082-1bfbb69289ee" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/pdf_glossary_analyzer.py" afterPath="$PROJECT_DIR$/pdf_glossary_analyzer.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +16,11 @@
       <file leaf-file-name="pdf_glossary_analyzer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="189" column="42" lean-forward="true" selection-start-line="189" selection-start-column="42" selection-end-line="189" selection-end-column="42" />
+            <state relative-caret-position="-771">
+              <caret line="147" column="22" lean-forward="true" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="22" />
               <folding>
                 <element signature="e#321#360#0" expanded="true" />
-                <marker date="1515131920649" expanded="true" signature="7093:7378" ph="..." />
+                <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
               </folding>
             </state>
           </provider>
@@ -314,7 +313,7 @@
           <caret line="172" column="76" lean-forward="true" selection-start-line="172" selection-start-column="76" selection-end-line="172" selection-end-column="76" />
           <folding>
             <element signature="e#321#360#0" expanded="true" />
-            <marker date="1515131920649" expanded="true" signature="7093:7378" ph="..." />
+            <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
           </folding>
         </state>
       </provider>
@@ -326,7 +325,7 @@
           <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding>
             <element signature="e#321#360#0" expanded="true" />
-            <marker date="1515131920649" expanded="true" signature="7093:7378" ph="..." />
+            <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
           </folding>
         </state>
       </provider>
@@ -345,7 +344,7 @@
           <caret line="109" column="81" lean-forward="false" selection-start-line="109" selection-start-column="81" selection-end-line="109" selection-end-column="81" />
           <folding>
             <element signature="e#321#360#0" expanded="true" />
-            <marker date="1515131920649" expanded="true" signature="7093:7378" ph="..." />
+            <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
           </folding>
         </state>
       </provider>
@@ -371,7 +370,7 @@
           <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
             <element signature="e#321#360#0" expanded="true" />
-            <marker date="1515131920649" expanded="true" signature="7093:7378" ph="..." />
+            <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
           </folding>
         </state>
       </provider>
@@ -458,11 +457,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="189" column="42" lean-forward="true" selection-start-line="189" selection-start-column="42" selection-end-line="189" selection-end-column="42" />
+        <state relative-caret-position="-771">
+          <caret line="147" column="22" lean-forward="true" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="22" />
           <folding>
             <element signature="e#321#360#0" expanded="true" />
-            <marker date="1515131920649" expanded="true" signature="7093:7378" ph="..." />
+            <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
           </folding>
         </state>
       </provider>

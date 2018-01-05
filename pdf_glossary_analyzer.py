@@ -126,7 +126,8 @@ def horizontal_bar_chart(sorted_spectrum, threshold=0):
             y,
             align='center',
             color='green',
-            ecolor='black')
+            ecolor='black',
+            zorder=3)  # z-order controls the overlapping of the bar over the grid
     # make the words align with the bars
     ax.set_yticks(x_pos)
     # label the words on the y-axis
@@ -136,6 +137,7 @@ def horizontal_bar_chart(sorted_spectrum, threshold=0):
     # labeling of titles
     ax.set_xlabel('Frequency of Appearance')
     ax.set_title('Machine Learning Glossary Spectrum')
+    ax.grid(zorder=0)  # ensure the grid is below the bar
     plt.show()
 
 
@@ -180,7 +182,8 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False):
 
 # do the work
 # PDF Extraction as string and remove unwanted char
-pdf_text = pdf_to_text_pdfminer(pdf_filename='ML_in_human_migration.pdf', char_filter=True)
+pdf_text = pdf_to_text_pdfminer(pdf_filename='Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf',
+                                char_filter=True)
 # do the counting for specific phrase
 glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
                           pdf_string=pdf_text,
