@@ -5,6 +5,7 @@
 # ML glossaries and frequencies
 # imported files: words_counter_utils.py + ml_glossary_all.txt
 
+from nltk.stem import WordNetLemmatizer
 import numpy as np
 import matplotlib.pyplot as plt
 import PyPDF2
@@ -39,10 +40,10 @@ def glossary_database_accumulate():
 
 
 # PyPDF2[works with unsolved bugs, use pdfminer instead]
-def pdf_to_text_pypdf2(filename):
+def pdf_to_text_pypdf2(pdf_filename):
     # Retrieved fr:
     # https://stackoverflow.com/questions/32667398/best-tool-for-text-extraction-from-pdf-in-python-3-4
-    pdf_filename = filename
+    pdf_filename = pdf_filename
     pdf_file_obj = open(pdf_filename, 'rb')
     pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
     page_obj = pdf_reader.getPage(1)
@@ -52,8 +53,9 @@ def pdf_to_text_pypdf2(filename):
 
 
 # Pdf Miner that extract .pdf as string, remove all unwanted char and returned
-def pdf_to_text_pdfminer(filename, char_filter=False):
-    pdf_filename = filename
+def pdf_to_text_pdfminer(pdf_filename, char_filter=False):
+    print('Converting \'{}\' to text...'.format(pdf_filename), end='')  # use end to continue printing
+    pdf_filename = pdf_filename
     # PDFMiner boilerplate
     rsrcmgr = PDFResourceManager()
     sio = StringIO()  # if use ByteIO, the hex code appears in the text
@@ -79,6 +81,7 @@ def pdf_to_text_pdfminer(filename, char_filter=False):
         # '(@' will replace '(@' only and not single '(' and '@'
         text = re.sub('[({[\])’*‘,.;:]', '', text)
         text = re.sub('-\n', '', text)
+    print('[Completed]')
     # return in string in lower case
     return text.lower()
 
@@ -147,6 +150,7 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False):
     pdf_string_split = pdf_string.split()
     # iteration for every phrase in database
     for i in range(len(database)):
+        print('Counting \'{}\'....'.format(database[i]), end='')  # progress printing
         counter = 0  # for f of each keywords
         phrase = database[i].split()
         # iteration through every word in pdf_string_split
@@ -163,6 +167,7 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False):
                 break
             counter += match_flag
         frequency[i] += counter
+        print(counter)
     spectrum = dict(zip(database, frequency))  # dict
     # sort from highest frequency to lowest, returned in list of tuples
     f_sorted_spectrum = sort_from_highest(spectrum)  # list of tuples
@@ -175,11 +180,15 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False):
 
 # do the work
 # PDF Extraction as string and remove unwanted char
-pdf_text = pdf_to_text_pdfminer(filename='ML_in_human_migration.pdf', char_filter=True)
+pdf_text = pdf_to_text_pdfminer(pdf_filename='ML_in_human_migration.pdf', char_filter=True)
 # do the counting for specific phrase
 glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
                           pdf_string=pdf_text,
                           visualize=True)
+
+
+# wordnet_lemmatizer = WordNetLemmatizer()
+# print(wordnet_lemmatizer.lemmatize(['statistics', 'models', 'players']))
 
 
 # StatusRecords[2 Jan, 6pm]
@@ -191,3 +200,8 @@ glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
 # -> successfully added glossary_counter_method_2() that split the words first before counting
 # -> e.g. 'r' is no longer counted from 'right'
 # Suggestion -> add the root word converter so that statistic & statistics treated as same thing
+#
+# StatusRecords[5 Jan, 5pm]
+# -> wordnet_lemmatizer cant apply directly to a string but only word by word, hence loops require
+# -> it take quiet long to execute only few words
+# Suggestion -> ignore this feature
