@@ -15,6 +15,7 @@ from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from io import StringIO
 import re
+import random
 # my own library
 from word_counter_utils import sort_from_highest
 
@@ -145,11 +146,34 @@ def horizontal_bar_chart(sorted_spectrum, threshold=0, title=None):
     plt.show()
 
 
+def save_spectrum_to_csv(sorted_spectrum, save_mode='all', title='Unknown'):
+    print('Saving to csv....', end='')
+    # take only none zero f words
+    sorted_spectrum_without_zero = [pair for pair in sorted_spectrum if pair[0] > 0]
+    # open the file and write
+    with open('glossary_spectrum.csv', 'w') as f:
+        # write title first
+        f.write(title + '\n')
+        # ---[Mode 'all' or 'random']----
+        # save all non-zeros-f words
+        if save_mode == 'all':
+            for item in sorted_spectrum_without_zero:
+                f.write('{}, {} \n'.format(item[1], item[0]))
+        # save only 5 random non-zero-f words, for accuracy testing purpose
+        elif save_mode == 'random':
+            rand_list = [i for i in range(0, len(sorted_spectrum_without_zero), 1)]
+            random.shuffle(rand_list)
+            for i in rand_list[:5]:
+                f.write('{}, {} \n'.format(sorted_spectrum_without_zero[i][1],
+                                           sorted_spectrum_without_zero[i][0]))
+    print('[Completed]')
+
+
 # this methods will split() the words down to single word den only do the comparison
 # [glossary_filename] -> the glossary.txt that provide all glossaries for searching
 # [pdf_string] -> the pdf to be searched but ady in preprocessed by pdf_to_text_pdfminer() to string
 # [visualize] -> print the bar chart with the title in [bar_chart_title]
-def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, bar_chart_title=None):
+def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, bar_chart_title=None, save_csv=False):
     database = []
     with open(glossary_filename, 'r') as f:
         for word in f:
@@ -182,9 +206,13 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, ba
     f_sorted_spectrum = sort_from_highest(spectrum)  # list of tuples
     print('SPECTRUM: ', f_sorted_spectrum)
 
-    # visualize
+    # visualize [configure the bar chart setting HERE]
     if visualize:
         horizontal_bar_chart(sorted_spectrum=f_sorted_spectrum, threshold=0, title=bar_chart_title)
+
+    # saving the dict to csv [configure the saving method here]
+    if save_csv:
+        save_spectrum_to_csv(sorted_spectrum=f_sorted_spectrum, save_mode='random', title=bar_chart_title)
 
 
 # --------------------------------[DO THE WORK]--------------------------------
@@ -197,7 +225,20 @@ pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
 glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
                           pdf_string=pdf_text,
                           visualize=True,
-                          bar_chart_title=pdf)
+                          bar_chart_title=pdf,
+                          save_csv=True)
+
+# l = []
+# random.seed(datetime.now())
+# for i in range(10):
+#     l.append(random.randint(0, 9))
+# print(l)
+# x = [i for i in range(0, 10, 1)]
+# random.shuffle(x)
+# print(x)
+# for inte in x[:5]:
+#     print(inte)
+
 
 # wordnet_lemmatizer = WordNetLemmatizer()
 # print(wordnet_lemmatizer.lemmatize('statistics')
@@ -213,10 +254,14 @@ glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
 # -> e.g. 'r' is no longer counted from 'right'
 # Suggestion -> add the root word converter so that statistic & statistics treated as same thing
 #
-# StatusRecords[5 Jan, 5pm]
+# StatusRecords[5 Jan, 1pm]
 # -> wordnet_lemmatizer cant apply directly to a string but only word by word, hence loops require
 # -> it take quiet long to execute only few words
 # Suggestion -> ignore this feature
 # -> i did a accuracy checking by comparing the acrobat search result with my result.
 #    and i realize words in graphs appear in pdf also counted like 'ann' used as labels
 # -> the hyphenated words are successfully counted, tested out 4 words and the accuracy is 100%
+#
+# ACCURACY TESTING[5 Jan, 3pm]
+# -> choose 5 pdf, manually counts the FIRST FIVE words that appear on the spectrum, then, COMPARE
+
