@@ -16,11 +16,11 @@
       <file leaf-file-name="pdf_glossary_analyzer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-771">
-              <caret line="147" column="22" lean-forward="true" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="22" />
+            <state relative-caret-position="399">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
-                <element signature="e#321#360#0" expanded="true" />
-                <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
+                <element signature="e#376#415#0" expanded="true" />
+                <marker date="1515134594976" expanded="true" signature="7944:8284" ph="..." />
               </folding>
             </state>
           </provider>
@@ -250,7 +250,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1897038" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66756755" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45135134" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -312,8 +312,8 @@
         <state relative-caret-position="3402">
           <caret line="172" column="76" lean-forward="true" selection-start-line="172" selection-start-column="76" selection-end-line="172" selection-end-column="76" />
           <folding>
-            <element signature="e#321#360#0" expanded="true" />
-            <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
+            <element signature="e#376#415#0" expanded="true" />
+            <marker date="1515134594976" expanded="true" signature="7944:8284" ph="..." />
           </folding>
         </state>
       </provider>
@@ -324,8 +324,8 @@
         <state relative-caret-position="315">
           <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding>
-            <element signature="e#321#360#0" expanded="true" />
-            <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
+            <element signature="e#376#415#0" expanded="true" />
+            <marker date="1515134594976" expanded="true" signature="7944:8284" ph="..." />
           </folding>
         </state>
       </provider>
@@ -343,8 +343,8 @@
         <state relative-caret-position="2289">
           <caret line="109" column="81" lean-forward="false" selection-start-line="109" selection-start-column="81" selection-end-line="109" selection-end-column="81" />
           <folding>
-            <element signature="e#321#360#0" expanded="true" />
-            <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
+            <element signature="e#376#415#0" expanded="true" />
+            <marker date="1515134594976" expanded="true" signature="7944:8284" ph="..." />
           </folding>
         </state>
       </provider>
@@ -369,8 +369,8 @@
         <state relative-caret-position="2520">
           <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
-            <element signature="e#321#360#0" expanded="true" />
-            <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
+            <element signature="e#376#415#0" expanded="true" />
+            <marker date="1515134594976" expanded="true" signature="7944:8284" ph="..." />
           </folding>
         </state>
       </provider>
@@ -457,11 +457,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-771">
-          <caret line="147" column="22" lean-forward="true" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="22" />
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#321#360#0" expanded="true" />
-            <marker date="1515132785282" expanded="true" signature="7234:7602" ph="..." />
+            <element signature="e#376#415#0" expanded="true" />
+            <marker date="1515134594976" expanded="true" signature="7944:8284" ph="..." />
           </folding>
         </state>
       </provider>

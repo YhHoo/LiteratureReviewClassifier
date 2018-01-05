@@ -1,5 +1,5 @@
-# -----------------[OVERALL]------------------
-# This py will compile all mini glossaries into a big one,
+# -----------------------------[OVERALL]--------------------------------
+# This py will compile all mini glossaries into a big one, called 'ml_glossary_all.txt'
 # convert the pdf as string and remove those unwanted char
 # then do the counting and sorting to produce a spectrum of
 # ML glossaries and frequencies
@@ -112,9 +112,10 @@ def glossary_counter_method_1(glossary_filename, pdf_string, visualize=False):
 
 
 # plot a horizontal bar chart
-def horizontal_bar_chart(sorted_spectrum, threshold=0):
+# the words will only be plotted on bar chart if the frequency of the word is greater than [threshold]
+def horizontal_bar_chart(sorted_spectrum, threshold=0, title=None):
     threshold = threshold
-    # take only the tuples if the frequency is greater than 'threshold'
+    # take only the words(tuples) if the frequency is greater than 'threshold'
     sorted_spectrum_without_zero = [pair for pair in sorted_spectrum if pair[0] > threshold]
     # x is the one glossary that will appear on y-axis, while y is the freq
     y, x = zip(*sorted_spectrum_without_zero)
@@ -136,13 +137,19 @@ def horizontal_bar_chart(sorted_spectrum, threshold=0):
     ax.invert_yaxis()
     # labeling of titles
     ax.set_xlabel('Frequency of Appearance')
-    ax.set_title('Machine Learning Glossary Spectrum')
+    if title is None:
+        ax.set_title('Machine Learning Glossary Spectrum')
+    else:
+        ax.set_title(title)
     ax.grid(zorder=0)  # ensure the grid is below the bar
     plt.show()
 
 
 # this methods will split() the words down to single word den only do the comparison
-def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False):
+# [glossary_filename] -> the glossary.txt that provide all glossaries for searching
+# [pdf_string] -> the pdf to be searched but ady in preprocessed by pdf_to_text_pdfminer() to string
+# [visualize] -> print the bar chart with the title in [bar_chart_title]
+def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, bar_chart_title=None):
     database = []
     with open(glossary_filename, 'r') as f:
         for word in f:
@@ -177,23 +184,25 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False):
 
     # visualize
     if visualize:
-        horizontal_bar_chart(sorted_spectrum=f_sorted_spectrum, threshold=0)
+        horizontal_bar_chart(sorted_spectrum=f_sorted_spectrum, threshold=0, title=bar_chart_title)
 
 
-# do the work
+# --------------------------------[DO THE WORK]--------------------------------
+# PDF filename
+pdf = 'Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf'
 # PDF Extraction as string and remove unwanted char
-pdf_text = pdf_to_text_pdfminer(pdf_filename='Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf',
+pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
                                 char_filter=True)
 # do the counting for specific phrase
 glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
                           pdf_string=pdf_text,
-                          visualize=True)
-
+                          visualize=True,
+                          bar_chart_title=pdf)
 
 # wordnet_lemmatizer = WordNetLemmatizer()
-# print(wordnet_lemmatizer.lemmatize(['statistics', 'models', 'players']))
+# print(wordnet_lemmatizer.lemmatize('statistics')
 
-
+# -------------------------------[LOG RECORDS]---------------------------------
 # StatusRecords[2 Jan, 6pm]
 # -> the 'r' will be counted as 2 from 'rigorous' which supposed to be 0.
 # -> 'model' also counted by 'mode'
@@ -208,3 +217,6 @@ glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
 # -> wordnet_lemmatizer cant apply directly to a string but only word by word, hence loops require
 # -> it take quiet long to execute only few words
 # Suggestion -> ignore this feature
+# -> i did a accuracy checking by comparing the acrobat search result with my result.
+#    and i realize words in graphs appear in pdf also counted like 'ann' used as labels
+# -> the hyphenated words are successfully counted, tested out 4 words and the accuracy is 100%
