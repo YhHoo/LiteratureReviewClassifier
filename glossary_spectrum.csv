@@ -1,36 +1,36 @@
-Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf
-regression, 5 
-performance, 5 
-algorithm, 4 
-model, 29 
-prediction, 25 
-Expert Systems With Applications STOCK.pdf
-input layer, 2 
-training set, 2 
-activation function, 2 
-hidden layer, 7 
-performance, 2 
-Genetic Algorithm on PipeCost.pdf
-summary, 1 
-node, 15 
-cost, 22 
-step, 1 
-loss, 3 
-ML_in_human_migration.pdf
-training, 17 
-histogram, 1 
-keras, 1 
-class, 1 
-cost, 1 
-Neurocomputing 2017 Khan.pdf
-ensemble, 9 
-layer, 31 
-graph, 3 
-algorithm, 34 
-weight, 9 
-Smart solution to improve water-energy nexus.pdf
-step, 7 
-objective, 2 
-hierarchical clustering, 1 
-cost, 1 
-instance, 2 
+Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf,,,
+regression,5,5,
+performance,5,6,one is Italic at page 6
+algorithm,4,4,
+model,29,29,
+prediction,25,25,
+Expert Systems With Applications STOCK.pdf,,,
+input layer,2,2,
+training set,2,2,
+activation function,2,2,
+hidden layer,7,7,one is Italic bt stil works
+performance,2,2,
+Genetic Algorithm on PipeCost.pdf,,,
+summary,1,1,
+node,15,15,nodes missed
+cost,22,22,
+step,1,1,
+loss,3,3,
+ML_in_human_migration.pdf,,,
+training,17,17,
+histogram,1,1,
+keras,1,2,miss one with / infront
+class,1,1,
+cost,1,1,
+Neurocomputing 2017 Khan.pdf,,,
+ensemble,9,9,
+layer,31,31,
+graph,3,3,
+algorithm,34,34,
+weight,9,9,
+Smart solution to improve water-energy nexus.pdf,,,
+step,7,7,
+objective,2,2,
+hierarchical clustering,1,1,
+cost,1,1,
+instance,2,2,

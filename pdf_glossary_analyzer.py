@@ -80,7 +80,8 @@ def pdf_to_text_pdfminer(pdf_filename, char_filter=False):
         # '[(@]' will replace '(' and '@'
         # While without the use of [] list, a string of char inside '' will be treated as entity, e.g.
         # '(@' will replace '(@' only and not single '(' and '@'
-        text = re.sub('[({[\])’*‘,.;:]', '', text)
+        text = re.sub('[({[\])’*‘/,.;:]', '', text)
+        # remove text hyphenation
         text = re.sub('-\n', '', text)
     print('[Completed]')
     # return in string in lower case
@@ -249,18 +250,7 @@ for pdf in pdf_list:
                               save_csv=True,
                               verbose=True)
 
-# l = []
-# random.seed(datetime.now())
-# for i in range(10):
-#     l.append(random.randint(0, 9))
-# print(l)
-# x = [i for i in range(0, 10, 1)]
-# random.shuffle(x)
-# print(x)
-# for inte in x[:5]:
-#     print(inte)
-
-
+# CONVERTING TO ROOT WORD
 # wordnet_lemmatizer = WordNetLemmatizer()
 # print(wordnet_lemmatizer.lemmatize('statistics')
 
