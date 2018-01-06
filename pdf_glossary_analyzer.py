@@ -5,10 +5,10 @@
 # ML glossaries and frequencies
 # imported files: words_counter_utils.py + ml_glossary_all.txt
 
-from nltk.stem import WordNetLemmatizer
+# from nltk.stem import WordNetLemmatizer
+# import PyPDF2
 import numpy as np
 import matplotlib.pyplot as plt
-import PyPDF2
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfpage import PDFPage
 from pdfminer.converter import TextConverter
@@ -41,16 +41,16 @@ def glossary_database_accumulate():
 
 
 # PyPDF2[works with unsolved bugs, use pdfminer instead]
-def pdf_to_text_pypdf2(pdf_filename):
-    # Retrieved fr:
-    # https://stackoverflow.com/questions/32667398/best-tool-for-text-extraction-from-pdf-in-python-3-4
-    pdf_filename = pdf_filename
-    pdf_file_obj = open(pdf_filename, 'rb')
-    pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
-    page_obj = pdf_reader.getPage(1)
-    # convert to text
-    text = page_obj.extractText()
-    return text
+# def pdf_to_text_pypdf2(pdf_filename):
+#     # Retrieved fr:
+#     # https://stackoverflow.com/questions/32667398/best-tool-for-text-extraction-from-pdf-in-python-3-4
+#     pdf_filename = pdf_filename
+#     pdf_file_obj = open(pdf_filename, 'rb')
+#     pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
+#     page_obj = pdf_reader.getPage(1)
+#     # convert to text
+#     text = page_obj.extractText()
+#     return text
 
 
 # Pdf Miner that extract .pdf as string, remove all unwanted char and returned
@@ -146,12 +146,17 @@ def horizontal_bar_chart(sorted_spectrum, threshold=0, title=None):
     plt.show()
 
 
-def save_spectrum_to_csv(sorted_spectrum, save_mode='all', title='Unknown'):
+def save_spectrum_to_csv(sorted_spectrum, save_mode='all', title='Unknown', append=False):
     print('Saving to csv....', end='')
+    # append flag
+    if append:
+        command = 'a'
+    else:
+        command = 'w'
     # take only none zero f words
     sorted_spectrum_without_zero = [pair for pair in sorted_spectrum if pair[0] > 0]
     # open the file and write
-    with open('glossary_spectrum.csv', 'w') as f:
+    with open('glossary_spectrum.csv', command) as f:
         # write title first
         f.write(title + '\n')
         # ---[Mode 'all' or 'random']----
@@ -173,7 +178,8 @@ def save_spectrum_to_csv(sorted_spectrum, save_mode='all', title='Unknown'):
 # [glossary_filename] -> the glossary.txt that provide all glossaries for searching
 # [pdf_string] -> the pdf to be searched but ady in preprocessed by pdf_to_text_pdfminer() to string
 # [visualize] -> print the bar chart with the title in [bar_chart_title]
-def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, bar_chart_title=None, save_csv=False):
+def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
+                              bar_chart_title=None, save_csv=False, verbose=False):
     database = []
     with open(glossary_filename, 'r') as f:
         for word in f:
@@ -183,7 +189,9 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, ba
     pdf_string_split = pdf_string.split()
     # iteration for every phrase in database
     for i in range(len(database)):
-        print('Counting \'{}\'....'.format(database[i]), end='')  # progress printing
+        # progress printing
+        if verbose:
+            print('Counting \'{}\'....'.format(database[i]), end='')
         counter = 0  # for f of each keywords
         phrase = database[i].split()
         # iteration through every word in pdf_string_split
@@ -200,7 +208,9 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, ba
                 break
             counter += match_flag
         frequency[i] += counter
-        print(counter)
+        # showing progress
+        if verbose:
+            print(counter)
     spectrum = dict(zip(database, frequency))  # dict
     # sort from highest frequency to lowest, returned in list of tuples
     f_sorted_spectrum = sort_from_highest(spectrum)  # list of tuples
@@ -212,21 +222,32 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, ba
 
     # saving the dict to csv [configure the saving method here]
     if save_csv:
-        save_spectrum_to_csv(sorted_spectrum=f_sorted_spectrum, save_mode='random', title=bar_chart_title)
+        save_spectrum_to_csv(sorted_spectrum=f_sorted_spectrum,
+                             save_mode='random',
+                             title=bar_chart_title,
+                             append=True)
 
 
 # --------------------------------[DO THE WORK]--------------------------------
 # PDF filename
-pdf = 'Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf'
-# PDF Extraction as string and remove unwanted char
-pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
-                                char_filter=True)
-# do the counting for specific phrase
-glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
-                          pdf_string=pdf_text,
-                          visualize=True,
-                          bar_chart_title=pdf,
-                          save_csv=True)
+pdf_list = ['Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf',
+            'Expert Systems With Applications STOCK.pdf',
+            'Genetic Algorithm on PipeCost.pdf',
+            'ML_in_human_migration.pdf',
+            'Neurocomputing 2017 Khan.pdf',
+            'Smart solution to improve water-energy nexus.pdf']
+# do the counting for 6 pdf in one run
+for pdf in pdf_list:
+    # PDF Extraction as string and remove unwanted char
+    pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
+                                    char_filter=True)
+    # do the counting for specific phrase
+    glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
+                              pdf_string=pdf_text,
+                              visualize=True,
+                              bar_chart_title=pdf,
+                              save_csv=True,
+                              verbose=True)
 
 # l = []
 # random.seed(datetime.now())
