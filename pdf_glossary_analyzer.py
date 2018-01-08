@@ -17,9 +17,8 @@ from io import StringIO
 import re
 import random
 import time
-from progressbar import ProgressBar, Percentage, Bar, SimpleProgress
 # my own library
-from word_counter_utils import sort_from_highest
+from word_counter_utils import sort_from_highest, ProgressBarForLoop
 
 
 # group all ml_glossary_1, _2, _3.txt, convert to lowercase and save in a new txt
@@ -174,23 +173,6 @@ def save_spectrum_to_csv(sorted_spectrum, save_mode='all', title='Unknown', appe
                 f.write('{}, {} \n'.format(sorted_spectrum_without_zero[i][1],
                                            sorted_spectrum_without_zero[i][0]))
     print('[Completed]')
-
-
-# progress bar, maxval is like max value in a ruler, and set the progress with update()
-class ProgressBarForLoop:
-    # progress bar setup, set the title and max value
-    def __init__(self, title, end=100):
-        widgets = [title+': ', Percentage(), ' ',
-                   Bar(marker='#', left='[', right=']'),
-                   ' ', SimpleProgress()]
-        self.pbar = ProgressBar(widgets=widgets, maxval=end).start()
-
-    def update(self, now):
-        self.pbar.update(now+1)
-
-    # kill the bar, ready to start over the new one
-    def destroy(self):
-        self.pbar.finish()
 
 
 # this methods will split() the words down to single word den only do the comparison
