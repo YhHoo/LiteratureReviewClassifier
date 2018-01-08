@@ -5,10 +5,10 @@
 # ML glossaries and frequencies
 # imported files: words_counter_utils.py + ml_glossary_all.txt
 
-# from nltk.stem import WordNetLemmatizer
-# import PyPDF2
+from nltk.stem import WordNetLemmatizer
 import numpy as np
 import matplotlib.pyplot as plt
+import PyPDF2
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfpage import PDFPage
 from pdfminer.converter import TextConverter
@@ -16,6 +16,8 @@ from pdfminer.layout import LAParams
 from io import StringIO
 import re
 import random
+import time
+from progressbar import ProgressBar, Percentage, Bar, SimpleProgress
 # my own library
 from word_counter_utils import sort_from_highest
 
@@ -41,16 +43,16 @@ def glossary_database_accumulate():
 
 
 # PyPDF2[works with unsolved bugs, use pdfminer instead]
-# def pdf_to_text_pypdf2(pdf_filename):
-#     # Retrieved fr:
-#     # https://stackoverflow.com/questions/32667398/best-tool-for-text-extraction-from-pdf-in-python-3-4
-#     pdf_filename = pdf_filename
-#     pdf_file_obj = open(pdf_filename, 'rb')
-#     pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
-#     page_obj = pdf_reader.getPage(1)
-#     # convert to text
-#     text = page_obj.extractText()
-#     return text
+def pdf_to_text_pypdf2(pdf_filename):
+    # Retrieved fr:
+    # https://stackoverflow.com/questions/32667398/best-tool-for-text-extraction-from-pdf-in-python-3-4
+    pdf_filename = pdf_filename
+    pdf_file_obj = open(pdf_filename, 'rb')
+    pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
+    page_obj = pdf_reader.getPage(1)
+    # convert to text
+    text = page_obj.extractText()
+    return text
 
 
 # Pdf Miner that extract .pdf as string, remove all unwanted char and returned
@@ -80,8 +82,7 @@ def pdf_to_text_pdfminer(pdf_filename, char_filter=False):
         # '[(@]' will replace '(' and '@'
         # While without the use of [] list, a string of char inside '' will be treated as entity, e.g.
         # '(@' will replace '(@' only and not single '(' and '@'
-        text = re.sub('[({[\])’*‘/,.;:]', '', text)
-        # remove text hyphenation
+        text = re.sub('[({[\])’*‘,.;:]', '', text)
         text = re.sub('-\n', '', text)
     print('[Completed]')
     # return in string in lower case
@@ -149,15 +150,15 @@ def horizontal_bar_chart(sorted_spectrum, threshold=0, title=None):
 
 def save_spectrum_to_csv(sorted_spectrum, save_mode='all', title='Unknown', append=False):
     print('Saving to csv....', end='')
-    # append flag
+    # append on old file or not
     if append:
-        command = 'a'
+        write_mode = 'a'
     else:
-        command = 'w'
+        write_mode = 'w'
     # take only none zero f words
     sorted_spectrum_without_zero = [pair for pair in sorted_spectrum if pair[0] > 0]
     # open the file and write
-    with open('glossary_spectrum.csv', command) as f:
+    with open('glossary_spectrum.csv', write_mode) as f:
         # write title first
         f.write(title + '\n')
         # ---[Mode 'all' or 'random']----
@@ -175,24 +176,41 @@ def save_spectrum_to_csv(sorted_spectrum, save_mode='all', title='Unknown', appe
     print('[Completed]')
 
 
+# progress bar, maxval is like max value in a ruler, and set the progress with update()
+class ProgressBarForLoop:
+    # progress bar setup, set the title and max value
+    def __init__(self, title, end=100):
+        widgets = [title+': ', Percentage(), ' ',
+                   Bar(marker='#', left='[', right=']'),
+                   ' ', SimpleProgress()]
+        self.pbar = ProgressBar(widgets=widgets, maxval=end).start()
+
+    def update(self, now):
+        self.pbar.update(now+1)
+
+    # kill the bar, ready to start over the new one
+    def destroy(self):
+        self.pbar.finish()
+
+
 # this methods will split() the words down to single word den only do the comparison
 # [glossary_filename] -> the glossary.txt that provide all glossaries for searching
 # [pdf_string] -> the pdf to be searched but ady in preprocessed by pdf_to_text_pdfminer() to string
 # [visualize] -> print the bar chart with the title in [bar_chart_title]
-def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
-                              bar_chart_title=None, save_csv=False, verbose=False):
+def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, bar_chart_title=None, save_csv=False):
     database = []
     with open(glossary_filename, 'r') as f:
         for word in f:
             database.append(word.rstrip())  # discharge the '\n'
+
+    # setup progress bar
+    pb = ProgressBarForLoop('Counting', end=len(database))
+
     # create another list of '0' as int with the same length as database
     frequency = [0] * len(database)
     pdf_string_split = pdf_string.split()
     # iteration for every phrase in database
     for i in range(len(database)):
-        # progress printing
-        if verbose:
-            print('Counting \'{}\'....'.format(database[i]), end='')
         counter = 0  # for f of each keywords
         phrase = database[i].split()
         # iteration through every word in pdf_string_split
@@ -209,9 +227,11 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
                 break
             counter += match_flag
         frequency[i] += counter
-        # showing progress
-        if verbose:
-            print(counter)
+        # progress bar update
+        pb.update(now=i)
+    pb.destroy()
+
+    # print the spectrum (list of tuple)
     spectrum = dict(zip(database, frequency))  # dict
     # sort from highest frequency to lowest, returned in list of tuples
     f_sorted_spectrum = sort_from_highest(spectrum)  # list of tuples
@@ -226,33 +246,35 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
         save_spectrum_to_csv(sorted_spectrum=f_sorted_spectrum,
                              save_mode='random',
                              title=bar_chart_title,
-                             append=True)
+                             append=False)  # only when u wan to analyze several pdf tgt
 
 
 # --------------------------------[DO THE WORK]--------------------------------
 # PDF filename
-pdf_list = ['Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf',
-            'Expert Systems With Applications STOCK.pdf',
-            'Genetic Algorithm on PipeCost.pdf',
-            'ML_in_human_migration.pdf',
-            'Neurocomputing 2017 Khan.pdf',
-            'Smart solution to improve water-energy nexus.pdf']
-# do the counting for 6 pdf in one run
-for pdf in pdf_list:
-    # PDF Extraction as string and remove unwanted char
-    pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
-                                    char_filter=True)
-    # do the counting for specific phrase
-    glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
-                              pdf_string=pdf_text,
-                              visualize=True,
-                              bar_chart_title=pdf,
-                              save_csv=True,
-                              verbose=True)
+pdf = 'Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf'
+# PDF Extraction as string and remove unwanted char
+pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
+                                char_filter=True)
+# do the counting for specific phrase
+glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
+                          pdf_string=pdf_text,
+                          visualize=True,
+                          bar_chart_title=pdf,
+                          save_csv=True)
 
-# CONVERTING TO ROOT WORD
+
+# lemmatize testing
+# print('Checking...')
 # wordnet_lemmatizer = WordNetLemmatizer()
-# print(wordnet_lemmatizer.lemmatize('statistics')
+# l = 'hey dear i am going to financial mode modes security go memories dancing'
+# l = l.split()
+# print(l)
+# # l = [word for wordnet_lemmatizer.lemmatize(word) in l]
+# j =[]
+# for word in l:
+#     j.append(wordnet_lemmatizer.lemmatize(word))  # default pos is nouns
+# print(j)
+
 
 # -------------------------------[LOG RECORDS]---------------------------------
 # StatusRecords[2 Jan, 6pm]
@@ -275,4 +297,8 @@ for pdf in pdf_list:
 #
 # ACCURACY TESTING[5 Jan, 3pm]
 # -> choose 5 pdf, manually counts the FIRST FIVE words that appear on the spectrum, then, COMPARE
+# -> 99% accuracy except the words with like mode, modes are not counted as same thing
+#
+# StatusRecords[8 Jan, 2pm]
+# -> using nltk.lemmatizer to solve plural nouns, like 'statistics' -> 'statistic'
 
