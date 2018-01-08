@@ -185,23 +185,37 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, ba
         for word in f:
             database.append(word.rstrip())  # discharge the '\n'
 
-    # setup progress bar
-    pb = ProgressBarForLoop('Counting', end=len(database))
-
     # create another list of '0' as int with the same length as database
     frequency = [0] * len(database)
     pdf_string_split = pdf_string.split()
+
+    # ---[LEMMATIZING]---
+    # prepare for lemmatizing
+    # setup progress bar for lemmatizing
+    pb = ProgressBarForLoop('Lemmatizing', end=len(pdf_string_split))
+    pdf_string_split_root = []
+    wordnet_lemmatizer = WordNetLemmatizer()
+    # convert all nouns to root word
+    for word in pdf_string_split:
+        pdf_string_split_root.append(wordnet_lemmatizer.lemmatize(word))
+        # update prog bar
+        pb.update(pdf_string_split.index(word))
+    pb.destroy()
+
+    # ---[COUNTING]--
+    # setup progress bar for converting
+    pb = ProgressBarForLoop('Counting', end=len(database))
     # iteration for every phrase in database
     for i in range(len(database)):
         counter = 0  # for f of each keywords
         phrase = database[i].split()
         # iteration through every word in pdf_string_split
-        for j in range(len(pdf_string_split) - len(phrase) + 1):
+        for j in range(len(pdf_string_split_root) - len(phrase) + 1):
             match_flag = 1
             # iterate thru word by word in the phrase
             for k in range(len(phrase)):
                 # if encounter one unmatched this loop will break
-                if pdf_string_split[j + k] == phrase[k]:
+                if pdf_string_split_root[j + k] == phrase[k]:
                     # do this if first and subsequent words match
                     continue
                 # do the following whenever 1 unmatched detected
@@ -243,19 +257,6 @@ glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
                           visualize=True,
                           bar_chart_title=pdf,
                           save_csv=True)
-
-
-# lemmatize testing
-# print('Checking...')
-# wordnet_lemmatizer = WordNetLemmatizer()
-# l = 'hey dear i am going to financial mode modes security go memories dancing'
-# l = l.split()
-# print(l)
-# # l = [word for wordnet_lemmatizer.lemmatize(word) in l]
-# j =[]
-# for word in l:
-#     j.append(wordnet_lemmatizer.lemmatize(word))  # default pos is nouns
-# print(j)
 
 
 # -------------------------------[LOG RECORDS]---------------------------------
