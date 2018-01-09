@@ -256,7 +256,7 @@ def heat_map(sorted_spectrum, pdf_len):
     for i in range(len(f)):
         f[i] = f[i] / pdf_len
     normalized_spectrum = dict(zip(word, f))
-    print(normalized_spectrum)
+
 
 # --------------------------------[DO THE WORK]--------------------------------
 # # PDF filename
