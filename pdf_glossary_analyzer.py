@@ -235,28 +235,45 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, ba
 
     # visualize [configure the bar chart setting HERE]
     if visualize:
-        horizontal_bar_chart(sorted_spectrum=f_sorted_spectrum, threshold=0, title=bar_chart_title)
+        horizontal_bar_chart(sorted_spectrum=f_sorted_spectrum,
+                             threshold=0,
+                             title=bar_chart_title)
 
-    # saving the dict to csv [configure the saving method here]
+    # saving the dict to csv [configure the saving method HERE]
     if save_csv:
         save_spectrum_to_csv(sorted_spectrum=f_sorted_spectrum,
                              save_mode='random',
                              title=bar_chart_title,
                              append=False)  # only when u wan to analyze several pdf tgt
+    # return
+    return f_sorted_spectrum, len(pdf_string_split)
 
+
+def heat_map(sorted_spectrum, pdf_len):
+    # normalization of frequency
+    f, word = zip(*sorted_spectrum)
+    f = list(f)
+    for i in range(len(f)):
+        f[i] = f[i] / pdf_len
+    normalized_spectrum = dict(zip(word, f))
+    print(normalized_spectrum)
 
 # --------------------------------[DO THE WORK]--------------------------------
-# PDF filename
-pdf = 'Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf'
-# PDF Extraction as string and remove unwanted char
-pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
-                                char_filter=True)
-# do the counting for specific phrase
-glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
-                          pdf_string=pdf_text,
-                          visualize=True,
-                          bar_chart_title=pdf,
-                          save_csv=True)
+# # PDF filename
+# pdf = 'Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf'
+# # PDF Extraction as string and remove unwanted char
+# pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
+#                                 char_filter=True)
+# # do the counting for specific phrase
+# glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
+#                           pdf_string=pdf_text,
+#                           visualize=True,
+#                           bar_chart_title=pdf,
+#                           save_csv=False)
+
+
+liss = [(46, 'model'), (25, 'prediction'), (13, 'matrix')]
+heat_map(liss, 100)
 
 
 # -------------------------------[LOG RECORDS]---------------------------------

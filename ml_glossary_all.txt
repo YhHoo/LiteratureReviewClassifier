@@ -270,7 +270,7 @@ root mean squared error
 ruby
 s-curve
 sas
-savedmodel
+saved model
 saver
 scalar
 scaling
