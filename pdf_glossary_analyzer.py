@@ -249,6 +249,8 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, ba
     return f_sorted_spectrum, len(pdf_string_split)
 
 
+# take this as the last step after the loop thru counter
+# access the final csv, save to buffer, convert
 def heat_map(sorted_spectrum, pdf_len):
     # normalization of frequency
     f, word = zip(*sorted_spectrum)
@@ -256,24 +258,22 @@ def heat_map(sorted_spectrum, pdf_len):
     for i in range(len(f)):
         f[i] = f[i] / pdf_len
     normalized_spectrum = dict(zip(word, f))
+    print(normalized_spectrum)
 
 
 # --------------------------------[DO THE WORK]--------------------------------
-# # PDF filename
-# pdf = 'Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf'
-# # PDF Extraction as string and remove unwanted char
-# pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
-#                                 char_filter=True)
-# # do the counting for specific phrase
-# glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
-#                           pdf_string=pdf_text,
-#                           visualize=True,
-#                           bar_chart_title=pdf,
-#                           save_csv=False)
-
-
-liss = [(46, 'model'), (25, 'prediction'), (13, 'matrix')]
-heat_map(liss, 100)
+# PDF filename
+pdf = 'Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf'
+# PDF Extraction as string and remove unwanted char
+pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
+                                char_filter=True)
+# do the counting for specific phrase
+spectrum, pdf_length = glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
+                                                 pdf_string=pdf_text,
+                                                 visualize=False,
+                                                 bar_chart_title=pdf,
+                                                 save_csv=False)
+heat_map(spectrum, pdf_length)
 
 
 # -------------------------------[LOG RECORDS]---------------------------------
