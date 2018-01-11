@@ -16,6 +16,7 @@ from pdfminer.layout import LAParams
 from io import StringIO
 import re
 import random
+import pandas as pd
 import time
 # my own library
 from word_counter_utils import sort_from_highest, ProgressBarForLoop
@@ -227,11 +228,10 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, ba
         pb.update(now=i)
     pb.destroy()
 
-    # print the spectrum (list of tuple)
     spectrum = dict(zip(database, frequency))  # dict
     # sort from highest frequency to lowest, returned in list of tuples
     f_sorted_spectrum = sort_from_highest(spectrum)  # list of tuples
-    print('SPECTRUM: ', f_sorted_spectrum)
+    print('SORTED SPECTRUM: ', f_sorted_spectrum)
 
     # visualize [configure the bar chart setting HERE]
     if visualize:
@@ -242,9 +242,9 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, ba
     # saving the dict to csv [configure the saving method HERE]
     if save_csv:
         save_spectrum_to_csv(sorted_spectrum=f_sorted_spectrum,
-                             save_mode='random',
+                             save_mode='all',
                              title=bar_chart_title,
-                             append=False)  # only when u wan to analyze several pdf tgt
+                             append=True)  # only when u wan to analyze several pdf tgt
     # return
     return f_sorted_spectrum, len(pdf_string_split)
 
@@ -262,18 +262,20 @@ def heat_map(sorted_spectrum, pdf_len):
 
 
 # --------------------------------[DO THE WORK]--------------------------------
-# PDF filename
-pdf = 'Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf'
-# PDF Extraction as string and remove unwanted char
-pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
-                                char_filter=True)
-# do the counting for specific phrase
-spectrum, pdf_length = glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
-                                                 pdf_string=pdf_text,
-                                                 visualize=False,
-                                                 bar_chart_title=pdf,
-                                                 save_csv=False)
-heat_map(spectrum, pdf_length)
+# # PDF filename
+# pdf = 'Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf'
+# # PDF Extraction as string and remove unwanted char
+# pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
+#                                 char_filter=True)
+# # do the counting for specific phrase
+# spectrum, pdf_length = glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
+#                                                  pdf_string=pdf_text,
+#                                                  visualize=False,
+#                                                  bar_chart_title=pdf,
+#                                                  save_csv=True)
+header = ['KEYWORDS', 'FREQUENCY']
+table = pd.read_table('glossary_spectrum.csv', sep=',', header=None, names=header)
+print(table[0])
 
 
 # -------------------------------[LOG RECORDS]---------------------------------
@@ -301,4 +303,8 @@ heat_map(spectrum, pdf_length)
 #
 # StatusRecords[8 Jan, 2pm]
 # -> using nltk.lemmatizer to solve plural nouns, like 'statistics' -> 'statistic'
+#
+# StatusRecords[11 Jan, 11am]
+# -> adding heatmap feature
+
 
