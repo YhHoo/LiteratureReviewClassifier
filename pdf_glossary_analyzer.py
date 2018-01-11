@@ -57,7 +57,7 @@ def pdf_to_text_pypdf2(pdf_filename):
 
 # Pdf Miner that extract .pdf as string, remove all unwanted char and returned
 def pdf_to_text_pdfminer(pdf_filename, char_filter=False):
-    print('Converting \'{}\' to text...'.format(pdf_filename), end='')  # use end to continue printing
+    print('\nConverting \'{}\' to text...'.format(pdf_filename), end='')  # use end to continue printing
     pdf_filename = pdf_filename
     # PDFMiner boilerplate
     rsrcmgr = PDFResourceManager()
@@ -180,7 +180,9 @@ def save_spectrum_to_csv(sorted_spectrum, save_mode='all', title='Unknown', appe
 # [glossary_filename] -> the glossary.txt that provide all glossaries for searching
 # [pdf_string] -> the pdf to be searched but ady in preprocessed by pdf_to_text_pdfminer() to string
 # [visualize] -> print the bar chart with the title in [bar_chart_title]
-def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, bar_chart_title=None, save_csv=False):
+def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
+                              bar_chart_title=None, save_csv=False):
+    # setting words to count
     database = []
     with open(glossary_filename, 'r') as f:
         for word in f:
@@ -227,7 +229,7 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, ba
         # progress bar update
         pb.update(now=i)
     pb.destroy()
-
+    # zip 2 list into a dict
     spectrum = dict(zip(database, frequency))  # dict
     # sort from highest frequency to lowest, returned in list of tuples
     f_sorted_spectrum = sort_from_highest(spectrum)  # list of tuples
@@ -246,7 +248,7 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False, ba
                              title=bar_chart_title,
                              append=True)  # only when u wan to analyze several pdf tgt
     # return
-    return f_sorted_spectrum, len(pdf_string_split)
+    return database, frequency, len(pdf_string_split)
 
 
 # take this as the last step after the loop thru counter
@@ -262,20 +264,30 @@ def heat_map(sorted_spectrum, pdf_len):
 
 
 # --------------------------------[DO THE WORK]--------------------------------
-# # PDF filename
-# pdf = 'Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf'
-# # PDF Extraction as string and remove unwanted char
-# pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
-#                                 char_filter=True)
-# # do the counting for specific phrase
-# spectrum, pdf_length = glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
-#                                                  pdf_string=pdf_text,
-#                                                  visualize=False,
-#                                                  bar_chart_title=pdf,
-#                                                  save_csv=True)
-header = ['KEYWORDS', 'FREQUENCY']
-table = pd.read_table('glossary_spectrum.csv', sep=',', header=None, names=header)
-print(table[0])
+# PDF filename
+pdf_list = ['Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf',
+            'Expert Systems With Applications STOCK.pdf']
+frequency_list_of_all = []
+for pdf in pdf_list:
+    # PDF Extraction as string and remove unwanted char
+    pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
+                                    char_filter=True)
+    # do the counting for specific phrase
+    keyword_list, frequency_list, pdf_full_len = glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
+                                                                           pdf_string=pdf_text,
+                                                                           visualize=False,
+                                                                           bar_chart_title=pdf,
+                                                                           save_csv=False)
+    frequency_list_of_all.append([int(round(f / pdf_full_len * 10000)) for f in frequency_list])
+# create a data frame to contain all of the data, gt ready for the heatmap
+data = np.array(frequency_list_of_all)
+table = pd.DataFrame(data=data.T, index=keyword_list, columns=['pdf1', 'pdf2'])
+print(table.head())
+
+# header = ['KEYWORDS', ]
+# table = pd.read_table('glossary_spectrum.csv', sep=',', header=None, names=header)
+# print(table)
+# # print('\n', table.iloc[7]['FREQUENCY'] + 4)
 
 
 # -------------------------------[LOG RECORDS]---------------------------------
@@ -305,6 +317,6 @@ print(table[0])
 # -> using nltk.lemmatizer to solve plural nouns, like 'statistics' -> 'statistic'
 #
 # StatusRecords[11 Jan, 11am]
-# -> adding heatmap feature
+# -> adding dataframe bfore heatmap
 
 
