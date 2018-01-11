@@ -1,0 +1,353 @@
+,Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf,Expert Systems With Applications STOCK.pdf
+a/b testing,0,0
+accuracy,2,9
+activation function,0,4
+adagrad,0,0
+algorithm,9,28
+ann,11,0
+angularjs,0,0
+area under the roc curve,0,0
+artificial intelligence,0,0
+auc,7,0
+backpropagation,0,0
+baseline,11,0
+batch,0,0
+batch size,0,0
+bayes theorem,0,0
+bayes' theorem,0,0
+bayesian network,0,0
+bayesian statistics,0,0
+bias,0,0
+big data,0,0
+binary classification,0,0
+binary variable,0,0
+binning,0,0
+binomial distribution,0,0
+bucketing,0,0
+business analytics,0,0
+business intelligence,0,0
+calibration layer,0,0
+candidate sampling,0,0
+categorical data,0,0
+categorical variable,0,0
+checkpoint,0,0
+chi-square test,0,0
+class,2,0
+class-imbalanced data set,0,0
+classification,0,0
+classification model,0,0
+classification threshold,0,0
+clustering,7,0
+coefficient,0,0
+collaborative filtering,0,0
+computational linguistics,0,0
+confidence interval,0,0
+confusion matrix,0,0
+continuous feature,0,0
+continuous variable,0,0
+convergence,5,0
+convex function,0,0
+convex optimization,0,0
+convex set,0,0
+correlation,7,2
+cost,2,2
+covariance,0,0
+cross-entropy,0,0
+cross-validation,2,0
+custom estimator,0,0
+d3,0,2
+data engineer,0,0
+data mining,2,11
+data science,0,0
+data set,0,11
+data structure,0,0
+data transformation,0,0
+data wrangling,0,0
+dataset api,0,0
+decile,0,0
+decision boundary,0,0
+decision tree,0,0
+decision trees,0,0
+deep learning,0,0
+deep model,0,0
+degree of freedom,0,0
+dense feature,0,0
+dense layer,0,0
+dependent variable,0,0
+derived feature,0,0
+descriptive statistics,0,0
+dimension reduction,0,0
+discrete feature,0,0
+discrete variable,0,0
+dropout regularization,0,0
+dummy variable,0,0
+dynamic model,0,0
+early stopping,0,0
+econometrics,0,0
+eda,0,0
+embeddings,0,0
+empirical risk minimization,0,0
+ensemble,0,0
+epoch,0,0
+estimator,0,0
+evaluation metrics,0,0
+example,9,2
+f-score,0,0
+false negative,0,0
+false positive,0,0
+false positive rate,0,0
+feature,4,6
+feature columns,0,0
+feature cross,0,0
+feature engineering,0,0
+feature reduction,0,0
+feature selection,0,0
+feature set,0,0
+feature spec,0,0
+frequentist statistics,0,0
+full softmax,0,0
+fully connected layer,0,0
+gate,0,0
+generalization,0,0
+generalized linear model,0,0
+gradient,0,0
+gradient boosting,0,0
+gradient clipping,0,0
+gradient descent,0,0
+graph,4,0
+heuristic,2,0
+hidden layer,0,15
+hierarchical clustering,0,0
+hinge loss,0,0
+histogram,2,0
+holdout data,0,0
+hyperparameter,0,0
+hyperplane,0,0
+hypothesis,0,0
+imputation,0,0
+independent variable,0,0
+inference,0,0
+inferential statistics,0,0
+input function,0,0
+input layer,0,4
+instance,2,0
+inter-rater agreement,0,0
+interpretability,2,0
+iqr,0,0
+iteration,4,2
+javascript,0,0
+k-means,0,0
+k-means clustering,0,0
+k-nearest neighbors,0,0
+keras,0,0
+kernel support vector machines,0,0
+knn,0,0
+kurtosis,0,0
+l1 loss,0,0
+l1 regularization,0,0
+l2 loss,0,0
+l2 regularization,0,0
+label,4,0
+labeled example,0,0
+lambda,0,0
+lasso regression,0,0
+latent variable,0,0
+layer,0,60
+layers api,0,0
+learning rate,0,0
+least squares regression,0,0
+lift,0,0
+linear algebra,0,0
+linear regression,0,0
+log loss,0,0
+logarithm,0,0
+logistic regression,7,0
+loss,0,0
+machine learning,13,0
+markov chain,0,0
+matlab,0,0
+matrix,23,0
+mean,4,6
+mean absolute error,0,2
+mean squared error,0,0
+median,0,0
+metric,2,0
+metrics api,0,0
+mini-batch,0,0
+mini-batch stochastic gradient descent,0,0
+ml,0,0
+mode,0,0
+model,83,80
+model training,5,0
+momentum,0,0
+monte carlo method,0,0
+moving average,0,2
+mse,0,0
+multi-class classification,0,0
+multinomial classification,0,0
+multivariate analysis,0,0
+n-gram,0,0
+naive bayes,0,0
+naive bayes classifier,0,0
+nan trap,0,0
+natural language processing,0,0
+negative class,0,0
+neural network,2,105
+neuron,0,13
+node,0,11
+normal distribution,0,0
+normalization,0,2
+nosql,0,0
+null hypothesis,0,0
+numerical data,0,0
+numpy,0,0
+objective,4,0
+objective function,4,0
+offline inference,0,0
+one-hot encoding,0,0
+one-vs-all,0,0
+online inference,0,0
+operation,0,2
+optimizer,0,0
+ordinal variable,0,0
+outlier,0,2
+outliers,0,0
+output layer,0,6
+overfitting,0,0
+p-value,0,0
+pagerank,0,0
+pandas,0,0
+parameter,7,9
+parameter server,0,0
+parameter update,0,0
+partial derivative,2,0
+partitioning strategy,0,0
+perceptron,0,0
+performance,13,4
+perl,0,0
+perplexity,0,0
+pipeline,5,0
+pivot table,0,0
+poisson distribution,0,0
+positive class,0,0
+posterior distribution,0,0
+pre-made estimator,0,0
+pre-trained model,0,0
+precision,0,0
+precision and recall,0,0
+prediction,45,19
+prediction bias,0,0
+predictive analytics,0,0
+predictive modeling,2,0
+predictor variable,0,0
+principal component analysis,0,0
+prior belief,0,0
+prior distribution,0,0
+probability distribution,0,0
+python,0,0
+quantile,0,0
+quartile,0,0
+quartile,0,0
+queue,0,0
+random forest,0,0
+range,4,2
+rank,4,0
+rater,0,0
+recall,0,0
+rectified linear unit,0,0
+regression,9,0
+regression model,2,0
+regularization,0,0
+regularization rate,0,0
+reinforcement learning,0,0
+relu,0,0
+representation,0,0
+response variable,0,0
+ridge regression,0,0
+roc-curve,0,0
+roc-auc,0,0
+root directory,0,0
+root mean squared error,0,0
+ruby,2,0
+s-curve,0,0
+sas,0,0
+saved model,0,0
+saver,0,0
+scalar,0,0
+scaling,0,2
+scikit-learn,0,0
+scripting,0,0
+semi-supervised learning,0,0
+sequence model,0,0
+serial correlation,0,0
+session,0,0
+shell,0,0
+sigmoid function,0,2
+skewness,0,0
+softmax,0,0
+sparse feature,0,0
+spatiotemporal data,0,0
+spss,0,0
+sql,0,0
+squared hinge loss,0,0
+squared loss,0,0
+standard deviation,2,0
+standard error,0,0
+standard normal distribution,0,0
+standardized score,0,0
+stata,0,0
+static model,0,0
+stationarity,0,0
+statistics,0,0
+step,0,13
+step size,0,0
+stochastic gradient descent,0,0
+strata,0,0
+stratified sampling,0,0
+structural risk minimization,0,0
+summary,0,0
+supervised learning,5,0
+supervised machine learning,0,0
+support vector machine,4,0
+svm,0,0
+synthetic feature,0,0
+t-distribution,0,0
+t-test,0,0
+tableau,0,0
+target,0,0
+temporal data,0,0
+tensor,0,0
+tensor processing unit,0,0
+tensor rank,0,0
+tensor shape,0,0
+tensor size,0,0
+tensorboard,0,0
+tensorflow,0,0
+tensorflow playground,0,0
+tensorflow serving,0,0
+test set,0,0
+tf.example,0,0
+tf.layers,0,0
+time series analysis,0,0
+time series data,0,0
+training,22,28
+training set,2,4
+transfer learning,0,0
+true negative,0,0
+true positive,0,0
+true positive rate,0,0
+type i error,0,0
+type ii error,0,0
+uima,0,0
+univariate analysis,0,0
+unlabeled example,0,0
+unsupervised learning,0,0
+unsupervised machine learning,0,0
+validation set,0,0
+variance,0,0
+variance,0,0
+vector,4,0
+vector space,0,0
+weight,0,9
+weka,0,0
+wide model,0,0
