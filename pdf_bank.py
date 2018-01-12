@@ -51,4 +51,3 @@ def pdf_bank():
         return pdf_full_addr
 
 
-print(pdf_bank())

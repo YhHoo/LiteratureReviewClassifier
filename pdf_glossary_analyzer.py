@@ -275,9 +275,9 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
 # # save to csv
 # table.to_csv('Table_of_all.csv')
 
-# df = pd.read_csv('Table_of_all.csv')
-# df['TOTAL F'] = df.sum(axis=1)
-# print(df.head())
+df = pd.read_csv('Table_of_all.csv')
+df['TOTAL F'] = df.sum(axis=1)
+print(df.head())
 
 # print('\n', table.iloc[7]['FREQUENCY'] + 4)
 
