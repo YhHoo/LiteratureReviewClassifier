@@ -251,18 +251,6 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
     return database, frequency, len(pdf_string_split)
 
 
-# take this as the last step after the loop thru counter
-# access the final csv, save to buffer, convert
-def heat_map(sorted_spectrum, pdf_len):
-    # normalization of frequency
-    f, word = zip(*sorted_spectrum)
-    f = list(f)
-    for i in range(len(f)):
-        f[i] = f[i] / pdf_len
-    normalized_spectrum = dict(zip(word, f))
-    print(normalized_spectrum)
-
-
 # --------------------------------[DO THE WORK]--------------------------------
 # # PDF filename
 # pdf_list = ['Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf',
@@ -292,12 +280,6 @@ def heat_map(sorted_spectrum, pdf_len):
 # print(df.head())
 
 # print('\n', table.iloc[7]['FREQUENCY'] + 4)
-
-c = ['banana', 'apple', 'pear', 'orange']
-for index, item in enumerate(c):
-    print(index, '+', item)
-
-
 
 
 # -------------------------------[LOG RECORDS]---------------------------------
