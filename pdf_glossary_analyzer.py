@@ -287,11 +287,17 @@ def heat_map(sorted_spectrum, pdf_len):
 # # save to csv
 # table.to_csv('Table_of_all.csv')
 
-df = pd.read_csv('Table_of_all.csv')
-df['TOTAL F'] = df.sum(axis=1)
-print(df.head())
+# df = pd.read_csv('Table_of_all.csv')
+# df['TOTAL F'] = df.sum(axis=1)
+# print(df.head())
 
 # print('\n', table.iloc[7]['FREQUENCY'] + 4)
+
+c = ['banana', 'apple', 'pear', 'orange']
+for index, item in enumerate(c):
+    print(index, '+', item)
+
+
 
 
 # -------------------------------[LOG RECORDS]---------------------------------
