@@ -306,7 +306,7 @@ print(df.head())
 # -> 99% accuracy except the words with like mode, modes are not counted as same thing
 #
 # StatusRecords[8 Jan, 2pm]
-# -> using nltk.lemmatizer to solve plural nouns, like 'statistics' -> 'statistic'
+# -> using nltk.lemmatizer to solve plural nouns, like 'statistics' -> 'stati stic'
 #
 # StatusRecords[11 Jan, 11am]
 # -> adding dataframe bfore heatmap
