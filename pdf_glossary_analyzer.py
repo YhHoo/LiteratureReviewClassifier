@@ -20,6 +20,7 @@ import pandas as pd
 import time
 # my own library
 from word_counter_utils import sort_from_highest, ProgressBarForLoop
+from pdf_bank import pdf_bank
 
 
 # group all ml_glossary_1, _2, _3.txt, convert to lowercase and save in a new txt
@@ -252,34 +253,27 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
 
 
 # --------------------------------[DO THE WORK]--------------------------------
-# # PDF filename
-# pdf_list = ['Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf',
-#             'Expert Systems With Applications STOCK.pdf']
-# frequency_list_of_all = []
-# for pdf in pdf_list:
-#     # PDF Extraction as string and remove unwanted char
-#     pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
-#                                     char_filter=True)
-#     # do the counting for specific phrase
-#     keyword_list, frequency_list, pdf_full_len = glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
-#                                                                            pdf_string=pdf_text,
-#                                                                            visualize=False,
-#                                                                            bar_chart_title=pdf,
-#                                                                            save_csv=False)
-#     # append all f list in to a bigger list, b4 that, normalize each of the f respect to own pdf total len
-#     frequency_list_of_all.append([int(round(f / pdf_full_len * 10000)) for f in frequency_list])
-# # create a data frame to contain all of the data, gt ready for the heatmap
-# data = np.array(frequency_list_of_all)
-# table = pd.DataFrame(data=data.T, index=keyword_list, columns=pdf_list)
-# print(table.head())
-# # save to csv
-# table.to_csv('Table_of_all.csv')
-
-df = pd.read_csv('Table_of_all.csv')
-df['TOTAL F'] = df.sum(axis=1)
-print(df.head())
-
-# print('\n', table.iloc[7]['FREQUENCY'] + 4)
+# PDF filename
+pdf_list = pdf_bank()
+frequency_list_of_all = []
+for pdf in pdf_list:
+    # PDF Extraction as string and remove unwanted char
+    pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
+                                    char_filter=True)
+    # do the counting for specific phrase
+    keyword_list, frequency_list, pdf_full_len = glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
+                                                                           pdf_string=pdf_text,
+                                                                           visualize=False,
+                                                                           bar_chart_title=pdf,
+                                                                           save_csv=False)
+    # append all f list in to a bigger list, b4 that, normalize each of the f respect to own pdf total len
+    frequency_list_of_all.append([int(round(f / pdf_full_len * 10000)) for f in frequency_list])
+# create a data frame to contain all of the data, gt ready for the heatmap
+data = np.array(frequency_list_of_all)
+table = pd.DataFrame(data=data.T, index=keyword_list, columns=pdf_list)
+print(table.head())
+# save to csv
+table.to_csv('Table_of_all.csv')
 
 
 # -------------------------------[LOG RECORDS]---------------------------------
