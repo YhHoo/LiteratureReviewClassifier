@@ -305,5 +305,11 @@ table.to_csv('Table_of_all.csv')
 #
 # StatusRecords[11 Jan, 11am]
 # -> adding dataframe bfore heatmap
+#
+# StatusRecords[22 Jan]
+# -> realize that quiet a number of terms in ml_glossary_all.txt like 'model', 'correlation' e.t.c are too
+#    common already, hence it will be useless to include them as features
+# -> manually design the ml_glossary_all2.txt based on the mindmap from
+#    https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/
 
 
