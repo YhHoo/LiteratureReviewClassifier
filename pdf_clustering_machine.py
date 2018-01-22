@@ -1,4 +1,9 @@
-# testing on the kmean clustering , get ready to cluster the pdf in to k groups by their keywords features
+# -----------------------------[OVERALL]--------------------------------
+# this py will first aspect a Table_of_all.csv to be completed by pdf_glossary_analyser.py that contains all
+# keywords and respective frequency for every pdf analyzed. Then this py will read the csv and load onto
+# a dataframe for testing on the kmean clustering , get ready to cluster the pdf in to k groups
+# by their keywords features
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd

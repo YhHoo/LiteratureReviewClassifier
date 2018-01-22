@@ -4,6 +4,8 @@
 # then do the counting and sorting to produce a spectrum of
 # ML glossaries and frequencies
 # imported files: words_counter_utils.py + ml_glossary_all.txt
+# it will then do the analysis for every pdf inside pdf_bank() and save their overall statistic
+# to Table_of_all.csv and get ready for pdf_clustering_machine.py
 
 from nltk.stem import WordNetLemmatizer
 import numpy as np
@@ -17,7 +19,6 @@ from io import StringIO
 import re
 import random
 import pandas as pd
-import time
 # my own library
 from word_counter_utils import sort_from_highest, ProgressBarForLoop
 from pdf_bank import pdf_bank
@@ -43,17 +44,17 @@ def glossary_database_accumulate():
     print('Saving Completed !')
 
 
-# PyPDF2[works with unsolved bugs, use pdfminer instead]
-def pdf_to_text_pypdf2(pdf_filename):
-    # Retrieved fr:
-    # https://stackoverflow.com/questions/32667398/best-tool-for-text-extraction-from-pdf-in-python-3-4
-    pdf_filename = pdf_filename
-    pdf_file_obj = open(pdf_filename, 'rb')
-    pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
-    page_obj = pdf_reader.getPage(1)
-    # convert to text
-    text = page_obj.extractText()
-    return text
+# # PyPDF2[works with unsolved bugs, use pdfminer instead]
+# def pdf_to_text_pypdf2(pdf_filename):
+#     # Retrieved fr:
+#     # https://stackoverflow.com/questions/32667398/best-tool-for-text-extraction-from-pdf-in-python-3-4
+#     pdf_filename = pdf_filename
+#     pdf_file_obj = open(pdf_filename, 'rb')
+#     pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
+#     page_obj = pdf_reader.getPage(1)
+#     # convert to text
+#     text = page_obj.extractText()
+#     return text
 
 
 # Pdf Miner that extract .pdf as string, remove all unwanted char and returned
@@ -236,7 +237,7 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
     f_sorted_spectrum = sort_from_highest(spectrum)  # list of tuples
     print('SORTED SPECTRUM: ', f_sorted_spectrum)
 
-    # visualize [configure the bar chart setting HERE]
+    # visualize [configure the Bar Chart & Saving setting HERE]
     if visualize:
         horizontal_bar_chart(sorted_spectrum=f_sorted_spectrum,
                              threshold=0,
@@ -253,7 +254,7 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
 
 
 # --------------------------------[DO THE WORK]--------------------------------
-# PDF filename
+# this pass all the PDF needed to analyze
 pdf_list = pdf_bank()
 frequency_list_of_all = []
 for pdf in pdf_list:
@@ -268,7 +269,7 @@ for pdf in pdf_list:
                                                                            save_csv=False)
     # append all f list in to a bigger list, b4 that, normalize each of the f respect to own pdf total len
     frequency_list_of_all.append([int(round(f / pdf_full_len * 10000)) for f in frequency_list])
-# create a data frame to contain all of the data, gt ready for the heatmap
+# create a data frame to contain all of the data, gt ready for saving to csv in a format suitable for clustering
 data = np.array(frequency_list_of_all)
 table = pd.DataFrame(data=data.T, index=keyword_list, columns=pdf_list)
 print(table.head())
