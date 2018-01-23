@@ -1,353 +1,90 @@
 glossary,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//A pressure-based method for monitoring leaks in a pipe distribution system Review.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//A-Graph-based-Analysis-of-Leak-Localization-in-Urban-W_2014_Procedia-Enginee.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//An efficient VRF system fault diagnosis strategy for refrigerant charge amount based on PCA and dual neural network model.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//A-New-Indicator-for-Real-time-Leak-Detection-in-Water-Distri_2014_Procedia-E.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Burst detection in district metering areas using a data driven clustering algorithm.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Cloud based machine learning approaches for leakage assessment.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Cloud-based-Event-Detection-Platform-for-Water-Distribution_2015_Procedia-En.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Detection of gas leakage sound using modular.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Fully automatic AI-based leak detection system.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Integration of modern remote sensing technologies for faster utility.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Leak-Localization-in-Water-Distribution-Networks-using-Pres_2015_IFAC-Papers.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Methodology for leakage isolation using pressure sensitivity analysis.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Real-time-Burst-Detection-in-Water-Distribution-Systems-Usi_2015_Procedia-En.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Sampling Design for Leak Detection in Water Distribution Networks.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//WML--Wireless-Sensor-Network-based-Machine-Learning-for-_2015_Procedia-Compu.pdf
-a/b testing,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-accuracy,6,6,32,3,4,0,3,5,1,0,2,2,21,0,14
-activation function,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-adagrad,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-algorithm,6,16,5,71,12,12,52,4,17,33,2,21,13,16,28
-ann,0,2,24,0,0,4,0,0,0,5,0,0,0,0,0
-angularjs,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-area under the roc curve,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-artificial intelligence,0,2,0,7,0,4,0,0,0,0,0,0,0,0,0
-auc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-backpropagation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-baseline,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-batch,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-batch size,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-bayes theorem,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-bayes' theorem,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-bayesian network,0,0,0,7,0,0,0,0,23,0,0,0,0,0,0
-bayesian statistics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-bias,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-big data,0,10,0,0,0,6,0,0,0,0,0,0,0,0,0
-binary classification,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-binary variable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-binning,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0
-binomial distribution,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-bucketing,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-business analytics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-business intelligence,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0
-calibration layer,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-candidate sampling,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-categorical data,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-categorical variable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-checkpoint,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-chi-square test,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-class,0,4,31,40,0,2,0,4,0,1,64,0,0,0,33
-class-imbalanced data set,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-classification,0,0,0,0,0,0,0,0,0,0,3,0,4,0,0
-classification model,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-classification threshold,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-clustering,0,138,0,0,23,2,0,2,0,1,0,2,0,2,3
-coefficient,1,8,0,7,0,0,0,0,0,0,3,0,0,2,0
-collaborative filtering,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-computational linguistics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-confidence interval,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-confusion matrix,0,0,0,0,0,0,0,0,0,0,7,0,0,0,0
-continuous feature,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-continuous variable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-convergence,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-convex function,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-convex optimization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-convex set,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-correlation,0,4,2,0,4,6,0,2,0,1,0,2,0,32,0
-cost,7,6,0,3,0,8,0,2,4,6,11,16,17,0,3
-covariance,0,0,3,0,0,0,6,0,0,0,0,0,0,0,0
-cross-entropy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-cross-validation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-custom estimator,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-d3,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
-data engineer,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-data mining,0,2,0,0,1,4,0,0,0,0,0,0,0,0,0
-data science,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-data set,1,0,29,0,0,6,17,31,0,3,2,0,0,0,3
-data structure,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-data transformation,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0
-data wrangling,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-dataset api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-decile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-decision boundary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-decision tree,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
-decision trees,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-deep learning,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-deep model,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-degree of freedom,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-dense feature,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-dense layer,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-dependent variable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-derived feature,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-descriptive statistics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-dimension reduction,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-discrete feature,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-discrete variable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-dropout regularization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-dummy variable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-dynamic model,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
-early stopping,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-econometrics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-eda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-embeddings,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-empirical risk minimization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-ensemble,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0
-epoch,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-estimator,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-evaluation metrics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-example,0,6,0,3,11,12,0,14,8,1,5,4,0,0,3
-f-score,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-false negative,0,0,0,0,3,0,0,0,0,2,0,0,0,0,0
-false positive,0,0,0,0,11,0,3,0,0,2,0,0,8,0,0
-false positive rate,0,0,0,0,8,0,0,0,0,1,0,0,4,0,0
-feature,0,25,32,0,16,0,0,2,1,4,2,0,0,2,50
-feature columns,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-feature cross,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-feature engineering,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-feature reduction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-feature selection,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
-feature set,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
-feature spec,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-frequentist statistics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-full softmax,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-fully connected layer,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-gate,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0
-generalization,0,0,5,0,0,0,3,0,0,0,0,0,0,0,0
-generalized linear model,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-gradient,10,0,0,0,0,0,0,4,0,6,0,0,0,0,8
-gradient boosting,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-gradient clipping,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-gradient descent,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-graph,0,52,0,0,7,2,0,0,1,0,0,2,0,2,0
-heuristic,0,0,0,0,3,0,0,0,0,0,0,1,0,0,0
-hidden layer,0,0,5,0,0,0,0,11,0,0,0,0,0,0,0
-hierarchical clustering,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-hinge loss,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-histogram,0,0,5,0,0,0,0,0,0,4,0,0,0,0,0
-holdout data,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-hyperparameter,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-hyperplane,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
-hypothesis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-imputation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-independent variable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-inference,0,0,2,0,3,0,0,0,1,0,0,0,4,0,8
-inferential statistics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-input function,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-input layer,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-instance,0,0,0,0,0,0,3,0,1,5,2,1,0,2,0
-inter-rater agreement,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-interpretability,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-iqr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-iteration,0,0,0,0,0,0,3,2,2,4,0,1,0,0,0
-javascript,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-k-means,0,17,0,0,0,0,0,0,0,0,0,0,0,0,0
-k-means clustering,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
-k-nearest neighbors,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-keras,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-kernel support vector machines,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-knn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28
-kurtosis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
-l1 loss,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-l1 regularization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-l2 loss,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-l2 regularization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-label,0,0,3,0,3,0,0,0,0,0,2,0,0,0,3
-labeled example,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-lambda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-lasso regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-latent variable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-layer,1,0,16,0,0,0,0,18,0,1,0,0,0,0,0
-layers api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-learning rate,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0
-least squares regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-lift,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
-linear algebra,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+ordinary least squares regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+olsr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 linear regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-log loss,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-logarithm,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0
 logistic regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-loss,22,4,0,27,11,2,0,0,5,2,11,7,17,2,0
-machine learning,0,12,0,0,0,8,3,0,1,2,3,0,0,0,36
-markov chain,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-matlab,0,0,0,0,0,2,0,0,0,4,0,0,0,4,0
-matrix,3,31,19,0,94,6,32,0,0,0,18,55,0,32,0
-mean,3,6,16,3,23,4,14,14,5,4,7,11,34,12,8
-mean absolute error,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
-mean squared error,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
-median,0,2,0,0,0,0,0,0,0,0,0,0,0,0,6
-metric,0,0,0,0,0,0,0,0,0,0,5,0,8,0,0
-metrics api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-mini-batch,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-mini-batch stochastic gradient descent,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-ml,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
-mode,0,0,5,0,0,0,0,0,0,1,0,0,0,0,0
-model,62,17,105,10,12,16,49,18,29,18,54,33,110,30,3
-model training,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-momentum,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-monte carlo method,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-moving average,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-mse,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-multi-class classification,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-multinomial classification,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-multivariate analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-n-gram,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-naive bayes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25
-naive bayes classifier,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-nan trap,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-natural language processing,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-negative class,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-neural network,1,6,34,10,4,10,0,69,20,10,0,0,4,2,0
-neuron,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0
-node,9,29,6,34,0,0,0,0,23,0,54,78,0,95,36
-normal distribution,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-normalization,0,0,2,0,0,0,9,0,0,0,0,0,4,0,0
-nosql,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-null hypothesis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-numerical data,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-numpy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-objective,2,4,5,0,1,4,3,0,0,2,0,4,0,80,0
-objective function,1,0,3,0,0,0,0,0,0,0,0,1,0,70,0
-offline inference,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-one-hot encoding,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-one-vs-all,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-online inference,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-operation,8,2,11,0,1,0,3,0,65,0,0,0,0,2,0
-optimizer,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-ordinal variable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-outlier,0,2,0,0,103,2,3,0,0,0,0,0,0,0,0
-outliers,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-output layer,0,0,3,0,0,0,0,5,0,0,0,0,0,0,0
-overfitting,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-p-value,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
-pagerank,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-pandas,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-parameter,18,2,19,0,0,2,6,13,12,16,16,3,4,9,3
-parameter server,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-parameter update,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-partial derivative,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0
-partitioning strategy,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
-perceptron,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-performance,1,4,42,0,17,10,3,9,2,4,13,1,8,5,36
-perl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-perplexity,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-pipeline,96,4,2,0,12,2,0,0,7,67,0,1,4,2,109
-pivot table,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-poisson distribution,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-positive class,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-posterior distribution,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-pre-made estimator,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-pre-trained model,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-precision,0,0,0,0,0,0,0,0,4,0,10,1,0,0,0
-precision and recall,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-prediction,1,0,0,0,3,0,0,0,0,0,2,0,17,0,0
-prediction bias,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-predictive analytics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-predictive modeling,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-predictor variable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-principal component analysis,0,0,2,0,3,0,14,0,0,0,0,0,0,0,0
-prior belief,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-prior distribution,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-probability distribution,0,0,0,0,0,0,0,0,0,0,0,0,4,2,0
-python,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
-quantile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-quartile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-quartile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-queue,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-random forest,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-range,5,2,5,0,9,6,0,0,2,10,8,2,8,0,22
-rank,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
-rater,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-recall,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-rectified linear unit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-regression,1,12,0,0,0,0,0,0,0,0,0,0,0,0,0
-regression model,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0
-regularization,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
-regularization rate,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-reinforcement learning,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0
-relu,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-representation,2,2,0,0,0,2,0,2,0,1,0,1,4,0,0
-response variable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stepwise regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+multivariate adaptive regression splines,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mars,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+locally estimated scatterplot smoothing,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+loess,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+k-nearest neighbor,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+knn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28
+learning vector quantization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lvq,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+self-organizing map,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0
+som,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0
+locally weighted learning,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lwl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ridge regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-roc-curve,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-roc-auc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-root directory,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-root mean squared error,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-ruby,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-s-curve,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-sas,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-saved model,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-saver,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-scalar,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-scaling,0,0,0,0,0,0,0,0,0,0,11,0,0,2,0
-scikit-learn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-scripting,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-semi-supervised learning,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-sequence model,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-serial correlation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-session,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-shell,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-sigmoid function,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0
-skewness,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-softmax,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-sparse feature,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-spatiotemporal data,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-spss,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-sql,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-squared hinge loss,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-squared loss,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-standard deviation,0,2,0,0,0,0,6,7,1,0,0,0,0,0,0
-standard error,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-standard normal distribution,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-standardized score,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-stata,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-static model,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-stationarity,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-statistics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-step,3,14,13,24,1,4,17,0,7,9,0,7,0,0,3
-step size,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-stochastic gradient descent,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-strata,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-stratified sampling,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-structural risk minimization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-summary,1,0,0,0,0,2,0,2,0,0,0,0,0,0,0
-supervised learning,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
-supervised machine learning,0,2,0,0,0,0,0,0,0,0,3,0,0,0,0
-support vector machine,1,2,3,7,1,4,0,0,1,1,0,0,0,0,3
-svm,5,6,2,0,0,0,0,0,0,1,0,0,0,0,19
-synthetic feature,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-t-distribution,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-t-test,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tableau,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-target,2,0,0,0,0,0,0,4,0,4,0,0,0,0,0
-temporal data,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tensor,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tensor processing unit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tensor rank,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tensor shape,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tensor size,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tensorboard,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tensorflow,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tensorflow playground,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tensorflow serving,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-test set,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tf.example,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-tf.layers,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-time series analysis,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
-time series data,0,2,0,3,4,16,0,0,0,0,0,0,4,0,0
-training,6,0,14,0,3,4,17,20,1,12,8,0,0,0,3
-training set,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
-transfer learning,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-true negative,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
-true positive,0,0,0,0,8,0,0,0,0,4,2,0,0,0,0
-true positive rate,0,0,0,0,5,0,0,0,0,3,0,0,0,0,0
-type i error,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-type ii error,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-uima,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-univariate analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-unlabeled example,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-unsupervised learning,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
-unsupervised machine learning,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-validation set,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-variance,1,0,2,0,0,0,3,5,0,0,0,0,4,0,8
-variance,1,0,2,0,0,0,3,5,0,0,0,0,4,0,8
-vector,6,14,8,10,85,10,3,7,1,1,3,0,0,5,3
-vector space,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-weight,0,10,8,0,0,0,0,7,0,0,2,0,0,0,0
-weka,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-wide model,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+least absolute shrinkage and selection operator,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lasso,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+elastic net,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+least-angle regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lars,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+classification and regression tree,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+cart,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+iterative dichotomiser 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+id3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+c4.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+c5.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+chi-squared automatic interaction detection,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+chaid,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+decision stump,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+m5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+conditional decision trees,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+naive bayes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25
+gaussian naive bayes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+multinomial naive bayes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+averaged one-dependence estimators,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+aode,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bayesian belief network,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bbn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bayesian network,0,0,0,7,0,0,0,0,23,0,0,0,0,0,0
+bn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+k-means,0,17,0,0,0,0,0,0,0,0,0,0,0,0,0
+k-medians,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+expectation maximisation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+em,0,0,0,0,0,0,3,0,4,3,0,0,0,0,0
+hierarchical clustering,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+perceptron,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+back-propagation,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0
+hopfield network,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+radial basis function network,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0
+rbfn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+deep boltzmann machine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+dbm,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
+deep belief networks,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+dbn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+convolutional neural network,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+cnn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stacked auto-encoders,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+principal component analysis,0,0,2,0,3,0,14,0,0,0,0,0,0,0,0
+pca,0,0,21,0,4,0,26,0,0,0,0,0,0,0,0
+principal component regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pcr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+partial least squares regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+plsr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sammon mapping,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+multidimensional scaling,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mds,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+projection pursuit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+linear discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mixture discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+quadratic discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+qda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+flexible discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+fda,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0
+boosting,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bootstrapped aggregation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bagging,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+adaboost,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stacked generalization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+blending,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+gradient boosting machines,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+gbm,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+gradient boosted regression trees,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+gbrt,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+random forest,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

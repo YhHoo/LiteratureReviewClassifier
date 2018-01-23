@@ -1,0 +1,25 @@
+[Group 0]
+An efficient VRF system fault diagnosis strategy for refrigerant charge amount based on PCA and dual neural network model.pdf
+Cloud-based-Event-Detection-Platform-for-Water-Distribution_2015_Procedia-En.pdf
+----------------------------------------------------------------------------------------------------
+[Group 1]
+A pressure-based method for monitoring leaks in a pipe distribution system Review.pdf
+A-New-Indicator-for-Real-time-Leak-Detection-in-Water-Distri_2014_Procedia-E.pdf
+Burst detection in district metering areas using a data driven clustering algorithm.pdf
+Cloud based machine learning approaches for leakage assessment.pdf
+Detection of gas leakage sound using modular.pdf
+Integration of modern remote sensing technologies for faster utility.pdf
+Leak-Localization-in-Water-Distribution-Networks-using-Pres_2015_IFAC-Papers.pdf
+Methodology for leakage isolation using pressure sensitivity analysis.pdf
+Real-time-Burst-Detection-in-Water-Distribution-Systems-Usi_2015_Procedia-En.pdf
+Sampling Design for Leak Detection in Water Distribution Networks.pdf
+----------------------------------------------------------------------------------------------------
+[Group 2]
+WML--Wireless-Sensor-Network-based-Machine-Learning-for-_2015_Procedia-Compu.pdf
+----------------------------------------------------------------------------------------------------
+[Group 3]
+Fully automatic AI-based leak detection system.pdf
+----------------------------------------------------------------------------------------------------
+[Group 4]
+A-Graph-based-Analysis-of-Leak-Localization-in-Urban-W_2014_Procedia-Enginee.pdf
+----------------------------------------------------------------------------------------------------

@@ -3,7 +3,7 @@
 # convert the pdf as string and remove those unwanted char
 # then do the counting and sorting to produce a spectrum of
 # ML glossaries and frequencies
-# imported files: words_counter_utils.py + ml_glossary_all.txt
+# imported files: words_counter_utils.py + ml_glossary_all.txt (or) ml_glossary_all2.csv
 # it will then do the analysis for every pdf inside pdf_bank() and save their overall statistic
 # to Table_of_all.csv and get ready for pdf_clustering_machine.py
 
@@ -186,9 +186,20 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
                               bar_chart_title=None, save_csv=False):
     # setting words to count
     database = []
-    with open(glossary_filename, 'r') as f:
-        for word in f:
-            database.append(word.rstrip())  # discharge the '\n'
+    # check glossary file format (.csv or .txt)
+    if glossary_filename.endswith('.txt'):
+        with open(glossary_filename, 'r') as f:
+            for word in f:
+                database.append(word.rstrip())  # discharge the '\n'
+    elif glossary_filename.endswith('.csv'):
+        # this is for glossary in the form of Categorical CSV
+        df = pd.read_csv('ml_glossary_all2.csv')
+        for col in df:
+            temp = df[col].dropna().tolist()
+            database += temp
+        print('DEBUGGING..', database)
+    else:
+        raise FileNotFoundError('[YH] ONLY USE (.csv) OR (.txt) AS glossary_filename')
 
     # create another list of '0' as int with the same length as database
     frequency = [0] * len(database)
@@ -262,17 +273,17 @@ for pdf in pdf_list:
     pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
                                     char_filter=True)
     # do the counting for specific phrase
-    keyword_list, frequency_list, pdf_full_len = glossary_counter_method_2(glossary_filename='ml_glossary_all.txt',
+    keyword_list, frequency_list, pdf_full_len = glossary_counter_method_2(glossary_filename='ml_glossary_all2.csv',
                                                                            pdf_string=pdf_text,
                                                                            visualize=False,
                                                                            bar_chart_title=pdf,
                                                                            save_csv=False)
-    # append all f list in to a bigger list, b4 that, normalize each of the f respect to own pdf total len
+    # append all f list in to a bigger list, b4 that, NORMALIZE each of the f respect to own pdf total len
     frequency_list_of_all.append([int(round(f / pdf_full_len * 10000)) for f in frequency_list])
 # create a data frame to contain all of the data, gt ready for saving to csv in a format suitable for clustering
 data = np.array(frequency_list_of_all)
 table = pd.DataFrame(data=data.T, index=keyword_list, columns=pdf_list)
-print(table.head())
+# print(table.head())
 # save to csv
 table.to_csv('Table_of_all.csv')
 
