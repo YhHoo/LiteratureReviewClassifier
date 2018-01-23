@@ -46,7 +46,8 @@ for group_no in range(cluster):
         if labels[i] == group_no:
             temp.append(i)
     index_by_group.append(temp)
-# save the pdf names of same cluster into same column in pandas
+
+# -------[SAVING TO TXT]--------
 pdf_by_group = []
 for index_list in index_by_group:
     pdf_by_group.append([pdf_list[index] for index in index_list])
