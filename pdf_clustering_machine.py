@@ -16,7 +16,7 @@ df_transpose = df.set_index('glossary').transpose()
 X = np.array(df_transpose.astype(int))
 
 # -----[KMEAN-CLUSTERING]-----
-cluster = 5
+cluster = 6
 classifier = KMeans(n_clusters=cluster)
 classifier.fit(X)
 # access the attributes from the classifier
@@ -28,6 +28,7 @@ ssw = classifier.inertia_
 # print('SSW=', ssw)
 # print('Centroids=\n', centroids)
 print('Labels=\n', labels)
+
 # -----[GROUPING PDF]-----
 pdf_list = []
 index_by_group = []
@@ -58,7 +59,7 @@ with open('Table_of_clustered_pdf.txt', 'w') as f:
         for pdf_name in pdf_by_group[i]:
             f.write(pdf_name + '\n')
         f.write('----'*25 + '\n')
-    print('Write Complete !')
+    print('Clustered Data Saving Completed !')
 
 
 
