@@ -16,7 +16,7 @@ df_transpose = df.set_index('glossary').transpose()
 X = np.array(df_transpose.astype(int))
 
 # -----[KMEAN-CLUSTERING]-----
-cluster = 6
+cluster = 6  # [USER ONLY CHANGE THIS PARAMETER !!!]
 classifier = KMeans(n_clusters=cluster)
 classifier.fit(X)
 # access the attributes from the classifier
