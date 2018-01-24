@@ -1,0 +1,11 @@
+,A pressure-based method for monitoring leaks in a pipe distribution system Review.pdf,A-Graph-based-Analysis-of-Leak-Localization-in-Urban-W_2014_Procedia-Enginee.pdf,An efficient VRF system fault diagnosis strategy for refrigerant charge amount based on PCA and dual neural network model.pdf,A-New-Indicator-for-Real-time-Leak-Detection-in-Water-Distri_2014_Procedia-E.pdf,Burst detection in district metering areas using a data driven clustering algorithm.pdf,Cloud based machine learning approaches for leakage assessment.pdf,Cloud-based-Event-Detection-Platform-for-Water-Distribution_2015_Procedia-En.pdf,Detection of gas leakage sound using modular.pdf,Fully automatic AI-based leak detection system.pdf,Integration of modern remote sensing technologies for faster utility.pdf,Leak-Localization-in-Water-Distribution-Networks-using-Pres_2015_IFAC-Papers.pdf,Methodology for leakage isolation using pressure sensitivity analysis.pdf,Real-time-Burst-Detection-in-Water-Distribution-Systems-Usi_2015_Procedia-En.pdf,Sampling Design for Leak Detection in Water Distribution Networks.pdf,WML--Wireless-Sensor-Network-based-Machine-Learning-for-_2015_Procedia-Compu.pdf
+regression,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+instance-based algorithms,0,0,0,0,0,0,0,0,0,0,0,0,0,100,50
+regularization algorithms,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+decision tree algorithms,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bayesian algorithms,0,0,0,100,0,0,0,0,85,0,0,0,0,0,40
+clustering algorithms,0,100,0,0,0,0,7,0,15,100,0,0,0,0,0
+ann,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0
+deep learning algorithms,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10
+dimensionality reduction algorithms,0,0,100,0,100,0,93,0,0,0,0,0,0,0,0
+ensemble algorithms,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

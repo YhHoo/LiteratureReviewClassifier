@@ -100,8 +100,11 @@ def direct_classification():
     # covert itself to array
     f_array = np.array(f_array)
     # -------[CONCLUSION INTO DATAFRAME]--------
-    # percentage_table_df = pd.DataFrame(data=f_array.T, columns=)
+    column_label = [string[62:] for string in list(result_df.columns.values)]
+    row_label = list(cat_glossary_df)
+    percentage_table_df = pd.DataFrame(data=f_array.T, columns=column_label, index=row_label)
+    # saving to csv
+    percentage_table_df.to_csv('percentage_table_of_categories.csv')
 
-# direct_classification()
 
-result_df = pd.read_csv('Table_of_all.csv', index_col=0)
+direct_classification()

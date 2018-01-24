@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17997a68-1c85-4d35-9082-1bfbb69289ee" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Table_of_all.csv" afterPath="$PROJECT_DIR$/Table_of_all.csv" />
-      <change beforePath="$PROJECT_DIR$/ml_glossary_all2.csv" afterPath="$PROJECT_DIR$/ml_glossary_all2.csv" />
       <change beforePath="$PROJECT_DIR$/pdf_clustering_machine.py" afterPath="$PROJECT_DIR$/pdf_clustering_machine.py" />
-      <change beforePath="$PROJECT_DIR$/word_counter_utils.py" afterPath="$PROJECT_DIR$/word_counter_utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,8 +51,8 @@
       <file leaf-file-name="pdf_glossary_analyzer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1212">
-              <caret line="197" column="38" lean-forward="true" selection-start-line="197" selection-start-column="38" selection-end-line="197" selection-end-column="38" />
+            <state relative-caret-position="426">
+              <caret line="281" column="68" lean-forward="true" selection-start-line="281" selection-start-column="68" selection-end-line="281" selection-end-column="68" />
               <folding>
                 <element signature="e#564#603#0" expanded="true" />
               </folding>
@@ -77,8 +73,8 @@
       <file leaf-file-name="pdf_clustering_machine.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pdf_clustering_machine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="231">
+              <caret line="91" column="44" lean-forward="true" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
               <folding>
                 <element signature="e#413#431#0" expanded="true" />
               </folding>
@@ -662,16 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1212">
-          <caret line="197" column="38" lean-forward="true" selection-start-line="197" selection-start-column="38" selection-end-line="197" selection-end-column="38" />
-          <folding>
-            <element signature="e#564#603#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ml_glossary_all2.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -688,10 +674,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="281" column="68" lean-forward="true" selection-start-line="281" selection-start-column="68" selection-end-line="281" selection-end-column="68" />
+          <folding>
+            <element signature="e#564#603#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pdf_clustering_machine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="91" column="44" lean-forward="true" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
           <folding>
             <element signature="e#413#431#0" expanded="true" />
           </folding>
