@@ -4,6 +4,7 @@
 # 3 words (e.g. recurrent neural network)as one
 
 import stop_words as sw
+import pandas as pd
 from progressbar import ProgressBar, Percentage, Bar, SimpleProgress
 
 
@@ -65,6 +66,15 @@ def all_in_one(word_string_input, verbose=False):
     # return the sorted list of freq n words
     return sorted_list
 
+
+# this function is for dataframe
+# it will return the dataframe column label given an element is in
+# that column. NOTE that NO duplicate element can exist at diff columns
+def get_column_label(dataframe, search):
+    for col in dataframe:
+        if search in dataframe[col].dropna().tolist():
+            return col
+            break
 
 
 
