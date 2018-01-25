@@ -99,6 +99,7 @@ def direct_classification():
         f_array.append(f_list)
     # covert itself to array
     f_array = np.array(f_array)
+
     # -------[CONCLUSION INTO DATAFRAME]--------
     column_label = [string[62:] for string in list(result_df.columns.values)]
     row_label = list(cat_glossary_df)
