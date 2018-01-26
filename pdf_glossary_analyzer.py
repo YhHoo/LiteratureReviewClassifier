@@ -193,7 +193,7 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
                 database.append(word.rstrip())  # discharge the '\n'
     elif glossary_filename.endswith('.csv'):
         # this is for glossary in the form of Categorical CSV
-        df = pd.read_csv('ml_glossary_all2.csv')
+        df = pd.read_csv(glossary_filename)
         for col in df:
             temp = df[col].dropna().tolist()
             database += temp

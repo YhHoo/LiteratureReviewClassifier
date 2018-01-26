@@ -6,6 +6,7 @@
 
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 # self library
 from word_counter_utils import get_column_label
@@ -66,7 +67,7 @@ def kmean_clustering():
         print('Clustered Data Saving Completed !')
 
 
-def direct_classification():
+def direct_classification(plot=False):
     # --------------[DATA GRABBING]----------------
     result_df = pd.read_csv('Table_of_all.csv', index_col=0)
     cat_glossary_df = pd.read_csv('ml_glossary_all2.csv')
@@ -104,8 +105,22 @@ def direct_classification():
     column_label = [string[62:] for string in list(result_df.columns.values)]
     row_label = list(cat_glossary_df)
     percentage_table_df = pd.DataFrame(data=f_array.T, columns=column_label, index=row_label)
+    # adding a last column of summing across rows
+    percentage_table_df['ROW_SUM'] = percentage_table_df.sum(axis=1)
+    # divide by 100 for last column of row sum
+    percentage_table_df['ROW_SUM'] = percentage_table_df['ROW_SUM'].apply(lambda x : x/100)
+
+    # -------[VISUALIZATION]--------
+    if plot:
+        percentage_table_df.plot(y='ROW_SUM',
+                                 use_index=True,
+                                 kind='barh',
+                                 grid=True,
+                                 title='Machine Learning Methodology Heatmap')
+        plt.show()
     # saving to csv
     percentage_table_df.to_csv('percentage_table_of_categories.csv')
+    print('Saving to CSV Completed !')
 
 
-direct_classification()
+direct_classification(plot=True)

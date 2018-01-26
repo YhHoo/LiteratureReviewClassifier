@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17997a68-1c85-4d35-9082-1bfbb69289ee" name="Default" comment="refresh">
-      <change beforePath="" afterPath="$PROJECT_DIR$/debugging.py" />
+    <list default="true" id="17997a68-1c85-4d35-9082-1bfbb69289ee" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/debugging.py" afterPath="$PROJECT_DIR$/debugging.py" />
+      <change beforePath="$PROJECT_DIR$/ml_glossary_all2.csv" afterPath="$PROJECT_DIR$/ml_glossary_all2.csv" />
+      <change beforePath="$PROJECT_DIR$/pdf_clustering_machine.py" afterPath="$PROJECT_DIR$/pdf_clustering_machine.py" />
       <change beforePath="$PROJECT_DIR$/pdf_glossary_analyzer.py" afterPath="$PROJECT_DIR$/pdf_glossary_analyzer.py" />
-      <change beforePath="$PROJECT_DIR$/result/6pdf_manual_vefiry.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/result/Expert Systems With Applications STOCK.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/result/Genetic Algorithm on PipeCost.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/result/ML_in_human_migration.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/result/Neurocomputing 2017 Khan.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/result/Smart solution to improve water-energy nexus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/result/Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/percentage_table_of_categories.csv" afterPath="$PROJECT_DIR$/percentage_table_of_categories.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,18 +24,18 @@
       <file leaf-file-name="pdf_bank.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pdf_bank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
+            <state relative-caret-position="735">
               <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pdf_glossary_analyzer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pdf_glossary_analyzer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
-              <caret line="328" column="0" lean-forward="false" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
+            <state relative-caret-position="525">
+              <caret line="148" column="8" lean-forward="false" selection-start-line="148" selection-start-column="8" selection-end-line="148" selection-end-column="8" />
               <folding>
                 <element signature="e#564#603#0" expanded="true" />
               </folding>
@@ -47,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pdf_clustering_machine.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pdf_clustering_machine.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pdf_clustering_machine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="78" column="42" lean-forward="false" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+            <state relative-caret-position="1385">
+              <caret line="117" column="43" lean-forward="true" selection-start-line="117" selection-start-column="43" selection-end-line="117" selection-end-column="43" />
               <folding>
                 <element signature="e#413#431#0" expanded="true" />
               </folding>
@@ -62,9 +58,11 @@
       <file leaf-file-name="debugging.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/debugging.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="273">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="60" />
+              <folding>
+                <element signature="e#231#250#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,9 +112,9 @@
         <option value="$PROJECT_DIR$/Table_of_all.csv" />
         <option value="$PROJECT_DIR$/word_counter_utils.py" />
         <option value="$PROJECT_DIR$/ml_glossary_all2.csv" />
-        <option value="$PROJECT_DIR$/pdf_clustering_machine.py" />
         <option value="$PROJECT_DIR$/pdf_glossary_analyzer.py" />
         <option value="$PROJECT_DIR$/debugging.py" />
+        <option value="$PROJECT_DIR$/pdf_clustering_machine.py" />
       </list>
     </option>
   </component>
@@ -127,8 +125,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="271" />
-    <option name="y" value="-8" />
+    <option name="x" value="468" />
+    <option name="y" value="167" />
     <option name="width" value="734" />
     <option name="height" value="734" />
   </component>
@@ -180,7 +178,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.debugging">
+  <component name="RunManager" selected="Python.pdf_clustering_machine">
     <configuration name="debugging" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -281,8 +279,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.debugging" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pdf_clustering_machine" />
+        <item index="0" class="java.lang.String" itemvalue="Python.pdf_clustering_machine" />
+        <item index="1" class="java.lang.String" itemvalue="Python.debugging" />
         <item index="2" class="java.lang.String" itemvalue="Python.pdf_glossary_analyzer" />
         <item index="3" class="java.lang.String" itemvalue="Python.temp_lowercase" />
         <item index="4" class="java.lang.String" itemvalue="Python.pdf_bank" />
@@ -324,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516859639539</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="minor changes">
+      <created>1516953861675</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1516953861675</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -392,7 +397,8 @@
     <MESSAGE value="renew" />
     <MESSAGE value="remove 6 .pdf and ignore result folder" />
     <MESSAGE value="refresh" />
-    <option name="LAST_COMMIT_MESSAGE" value="refresh" />
+    <MESSAGE value="minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -636,14 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pdf_bank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/word_counter_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1029">
@@ -668,30 +666,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/debugging.py">
+    <entry file="file://$PROJECT_DIR$/pdf_bank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        <state relative-caret-position="735">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdf_clustering_machine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="78" column="42" lean-forward="false" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
-          <folding>
-            <element signature="e#413#431#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="328" column="0" lean-forward="false" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
+        <state relative-caret-position="525">
+          <caret line="148" column="8" lean-forward="false" selection-start-line="148" selection-start-column="8" selection-end-line="148" selection-end-column="8" />
           <folding>
             <element signature="e#564#603#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debugging.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="60" />
+          <folding>
+            <element signature="e#231#250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdf_clustering_machine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1385">
+          <caret line="117" column="43" lean-forward="true" selection-start-line="117" selection-start-column="43" selection-end-line="117" selection-end-column="43" />
+          <folding>
+            <element signature="e#413#431#0" expanded="true" />
           </folding>
         </state>
       </provider>
