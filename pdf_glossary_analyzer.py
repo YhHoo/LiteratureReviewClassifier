@@ -19,9 +19,21 @@ from io import StringIO
 import re
 import random
 import pandas as pd
+from os import listdir
+from os.path import isfile, join
 # my own library
 from word_counter_utils import sort_from_highest, ProgressBarForLoop
 from pdf_bank import pdf_bank
+
+
+def pdf_storage():
+    # this is the path of folder where mendeley used to contains pdf with filenames
+    path_mendeley = 'C://Users//YH//AppData//Local//Mendeley Ltd//Mendeley Desktop//Downloaded//'
+    # listdir(path) will return a list of filenames of files in the dir path
+    all_file_path = [(path_mendeley + f) for f in listdir(path_mendeley) if isfile(join(path_mendeley, f))]
+    # all filename only
+    all_filename = listdir(path_mendeley)
+    return all_file_path, all_filename
 
 
 # group all ml_glossary_1, _2, _3.txt, convert to lowercase and save in a new txt
