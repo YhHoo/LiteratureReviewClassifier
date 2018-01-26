@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17997a68-1c85-4d35-9082-1bfbb69289ee" name="Default" comment="">
+    <list default="true" id="17997a68-1c85-4d35-9082-1bfbb69289ee" name="Default" comment="refresh">
+      <change beforePath="" afterPath="$PROJECT_DIR$/debugging.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Expert Systems With Applications STOCK.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Genetic Algorithm on PipeCost.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ML_in_human_migration.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Neurocomputing 2017 Khan.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Smart solution to improve water-energy nexus.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/pdf_glossary_analyzer.py" afterPath="$PROJECT_DIR$/pdf_glossary_analyzer.py" />
+      <change beforePath="$PROJECT_DIR$/result/6pdf_manual_vefiry.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/result/Expert Systems With Applications STOCK.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/result/Genetic Algorithm on PipeCost.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/result/ML_in_human_migration.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/result/Neurocomputing 2017 Khan.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/result/Smart solution to improve water-energy nexus.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/result/Towards Effective Prioritizing Water Pipe Replacement and Rehabilitation.png" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pdf_glossary_analyzer.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pdf_glossary_analyzer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5901">
-              <caret line="281" column="68" lean-forward="false" selection-start-line="281" selection-start-column="68" selection-end-line="281" selection-end-column="68" />
+            <state relative-caret-position="860">
+              <caret line="328" column="0" lean-forward="false" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
               <folding>
                 <element signature="e#564#603#0" expanded="true" />
               </folding>
@@ -44,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pdf_clustering_machine.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pdf_clustering_machine.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pdf_clustering_machine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state relative-caret-position="1008">
+              <caret line="78" column="42" lean-forward="false" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
               <folding>
                 <element signature="e#413#431#0" expanded="true" />
               </folding>
@@ -56,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Table_of_clustered_pdf.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Table_of_clustered_pdf.txt">
+      <file leaf-file-name="debugging.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/debugging.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="105">
+              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -108,11 +111,12 @@
         <option value="$PROJECT_DIR$/ml_glossary_all2X.txt" />
         <option value="$PROJECT_DIR$/ml_glossary_all2.txt" />
         <option value="$PROJECT_DIR$/temp_lowercase.py" />
-        <option value="$PROJECT_DIR$/pdf_glossary_analyzer.py" />
         <option value="$PROJECT_DIR$/Table_of_all.csv" />
         <option value="$PROJECT_DIR$/word_counter_utils.py" />
         <option value="$PROJECT_DIR$/ml_glossary_all2.csv" />
         <option value="$PROJECT_DIR$/pdf_clustering_machine.py" />
+        <option value="$PROJECT_DIR$/pdf_glossary_analyzer.py" />
+        <option value="$PROJECT_DIR$/debugging.py" />
       </list>
     </option>
   </component>
@@ -123,9 +127,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="271" />
+    <option name="y" value="-8" />
     <option name="width" value="734" />
-    <option name="height" value="867" />
+    <option name="height" value="734" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -175,8 +180,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pdf_clustering_machine">
-    <configuration name="ml_glossary_frequency_counter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.debugging">
+    <configuration name="debugging" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -188,8 +193,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="LiteratureReviewClassifier" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ml_glossary_frequency_counter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debugging.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -269,19 +273,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.ml_glossary_frequency_counter" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pdf_glossary_analyzer" />
-      <item index="2" class="java.lang.String" itemvalue="Python.pdf_bank" />
-      <item index="3" class="java.lang.String" itemvalue="Python.pdf_clustering_machine" />
-      <item index="4" class="java.lang.String" itemvalue="Python.temp_lowercase" />
+      <item index="0" class="java.lang.String" itemvalue="Python.pdf_glossary_analyzer" />
+      <item index="1" class="java.lang.String" itemvalue="Python.pdf_bank" />
+      <item index="2" class="java.lang.String" itemvalue="Python.pdf_clustering_machine" />
+      <item index="3" class="java.lang.String" itemvalue="Python.temp_lowercase" />
+      <item index="4" class="java.lang.String" itemvalue="Python.debugging" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.pdf_clustering_machine" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pdf_glossary_analyzer" />
-        <item index="2" class="java.lang.String" itemvalue="Python.temp_lowercase" />
-        <item index="3" class="java.lang.String" itemvalue="Python.pdf_bank" />
-        <item index="4" class="java.lang.String" itemvalue="Python.ml_glossary_frequency_counter" />
+        <item index="0" class="java.lang.String" itemvalue="Python.debugging" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pdf_clustering_machine" />
+        <item index="2" class="java.lang.String" itemvalue="Python.pdf_glossary_analyzer" />
+        <item index="3" class="java.lang.String" itemvalue="Python.temp_lowercase" />
+        <item index="4" class="java.lang.String" itemvalue="Python.pdf_bank" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +310,21 @@
       <option name="project" value="LOCAL" />
       <updated>1516857614068</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="remove 6 .pdf and ignore result folder">
+      <created>1516859287869</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1516859287869</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refresh">
+      <created>1516859639539</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1516859639539</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -325,7 +343,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16995768" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5675676" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3391892" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -372,7 +390,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="renew" />
-    <option name="LAST_COMMIT_MESSAGE" value="renew" />
+    <MESSAGE value="remove 6 .pdf and ignore result folder" />
+    <MESSAGE value="refresh" />
+    <option name="LAST_COMMIT_MESSAGE" value="refresh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -385,23 +405,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#564#603#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ml_glossary_all.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5796">
-          <caret line="276" column="12" lean-forward="false" selection-start-line="276" selection-start-column="12" selection-end-line="276" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -618,20 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ml_glossary_all2.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/word_counter_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/percentage_table_of_categories.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -639,13 +628,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5901">
-          <caret line="281" column="68" lean-forward="false" selection-start-line="281" selection-start-column="68" selection-end-line="281" selection-end-column="68" />
-          <folding>
-            <element signature="e#564#603#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -653,6 +640,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/word_counter_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1029">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -665,12 +660,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ml_glossary_all2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="146" lean-forward="false" selection-start-line="7" selection-start-column="138" selection-end-line="7" selection-end-column="146" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debugging.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pdf_clustering_machine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        <state relative-caret-position="1008">
+          <caret line="78" column="42" lean-forward="false" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
           <folding>
             <element signature="e#413#431#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="328" column="0" lean-forward="false" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
+          <folding>
+            <element signature="e#564#603#0" expanded="true" />
           </folding>
         </state>
       </provider>

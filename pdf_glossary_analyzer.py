@@ -240,7 +240,7 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
             counter += match_flag
         frequency[i] += counter
         # progress bar update
-        pb.update(now=i)
+        pb.update(i)
     pb.destroy()
     # zip 2 list into a dict
     spectrum = dict(zip(database, frequency))  # dict
@@ -322,5 +322,8 @@ table.to_csv('Table_of_all.csv')
 #    common already, hence it will be useless to include them as features
 # -> manually design the ml_glossary_all2.txt based on the mindmap from
 #    https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/
+#
+# StatusRecords[26 Jan]
+# -> lemmatize the glossary also bfore counting !!
 
 
