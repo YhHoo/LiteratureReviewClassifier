@@ -5,12 +5,12 @@
 # ML glossaries and frequencies
 # imported files: words_counter_utils.py + ml_glossary_all.txt (or) ml_glossary_all2.csv
 # it will then do the analysis for every pdf inside pdf_bank() and save their overall statistic
-# to Table_of_all.csv and get ready for pdf_clustering_machine.py
+# to Table_of_glossary_frequency.csv and get ready for pdf_clustering_machine.py
 
 from nltk.stem import WordNetLemmatizer
 import numpy as np
 import matplotlib.pyplot as plt
-import PyPDF2
+# import PyPDF2
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfpage import PDFPage
 from pdfminer.converter import TextConverter
@@ -303,7 +303,7 @@ data = np.array(frequency_list_of_all)
 table = pd.DataFrame(data=data.T, index=keyword_list, columns=short_of_pdf)
 # print(table.head())
 # save to csv
-table.to_csv('Table_of_all.csv')
+table.to_csv('Table_of_glossary_frequency.csv')
 
 
 # -------------------------------[LOG RECORDS]---------------------------------
