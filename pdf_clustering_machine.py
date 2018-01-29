@@ -108,7 +108,7 @@ def direct_classification(plot=False):
     # adding a last column of summing across rows
     percentage_table_df['ROW_SUM'] = percentage_table_df.sum(axis=1)
     # divide by 100 for last column of row sum
-    percentage_table_df['ROW_SUM'] = percentage_table_df['ROW_SUM'].apply(lambda x : x/100)
+    percentage_table_df['ROW_SUM'] = percentage_table_df['ROW_SUM'].apply(lambda x: x/100)
 
     # -------[VISUALIZATION]--------
     if plot:

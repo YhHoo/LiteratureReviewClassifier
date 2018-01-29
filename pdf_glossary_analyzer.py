@@ -29,11 +29,17 @@ from pdf_bank import pdf_bank
 def pdf_storage():
     # this is the path of folder where mendeley used to contains pdf with filenames
     path_mendeley = 'C://Users//YH//AppData//Local//Mendeley Ltd//Mendeley Desktop//Downloaded//'
-    # listdir(path) will return a list of filenames of files in the dir path
+    # listdir(path) will return a list of file path
     all_file_path = [(path_mendeley + f) for f in listdir(path_mendeley) if isfile(join(path_mendeley, f))]
-    # all filename only
+    # list of all filename only
     all_filename = listdir(path_mendeley)
-    return all_file_path, all_filename
+
+    # create a df storing the short form and pdf name
+    short_pdf = ['PDF[{}]'.format(i + 1) for i in range(len(all_filename))]
+    # put everything in df
+    df = pd.DataFrame(data=all_filename, index=short_pdf)
+    df.to_csv('LRC_citation.csv')
+    return all_file_path, short_pdf
 
 
 # group all ml_glossary_1, _2, _3.txt, convert to lowercase and save in a new txt
@@ -336,6 +342,6 @@ table.to_csv('Table_of_all.csv')
 #    https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/
 #
 # StatusRecords[26 Jan]
-# -> lemmatize the glossary also bfore counting !!
+# -> lemmatize the glossary also bfore counting !! [replace with manual lemmatize 29 Jan]
 
 

@@ -21,12 +21,18 @@
 # plt.show()
 
 # --------------------------------------------------------------------
+
 from os import listdir
 from os.path import isfile, join
+import pandas as pd
 
 myPath = 'C://Users//YH//AppData//Local//Mendeley Ltd//Mendeley Desktop//Downloaded//'
 # the if statement check whether it is a file
 filename = [(myPath + f) for f in listdir(myPath) if isfile(join(myPath, f))]
-print(filename)
+# print(filename)
 l = listdir(myPath)
-print(l)
+# create index for df
+index = ['PDF[{}]'.format(i+1) for i in range(len(l))]
+# put everything in df
+df = pd.DataFrame(data=l, index=index)
+df.to_csv('LRC_citation.csv')
