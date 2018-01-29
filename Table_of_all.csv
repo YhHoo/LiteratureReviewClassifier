@@ -1,90 +1,90 @@
-,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//A pressure-based method for monitoring leaks in a pipe distribution system Review.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//A-Graph-based-Analysis-of-Leak-Localization-in-Urban-W_2014_Procedia-Enginee.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//An efficient VRF system fault diagnosis strategy for refrigerant charge amount based on PCA and dual neural network model.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//A-New-Indicator-for-Real-time-Leak-Detection-in-Water-Distri_2014_Procedia-E.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Burst detection in district metering areas using a data driven clustering algorithm.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Cloud based machine learning approaches for leakage assessment.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Cloud-based-Event-Detection-Platform-for-Water-Distribution_2015_Procedia-En.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Detection of gas leakage sound using modular.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Fully automatic AI-based leak detection system.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Integration of modern remote sensing technologies for faster utility.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Leak-Localization-in-Water-Distribution-Networks-using-Pres_2015_IFAC-Papers.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Methodology for leakage isolation using pressure sensitivity analysis.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Real-time-Burst-Detection-in-Water-Distribution-Systems-Usi_2015_Procedia-En.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//Sampling Design for Leak Detection in Water Distribution Networks.pdf,C://Users//YH//Desktop//Master//Papers//Useful//ScDirect_Jan//WML--Wireless-Sensor-Network-based-Machine-Learning-for-_2015_Procedia-Compu.pdf
-ordinary least squares regression,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-olsr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-linear regression,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-logistic regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-stepwise regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-multivariate adaptive regression splines,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-mars,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-locally estimated scatterplot smoothing,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-loess,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-k-nearest neighbor,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
-knn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28
-learning vector quantization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-lvq,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-self-organizing map,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0
-som,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0
-locally weighted learning,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-lwl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-ridge regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-least absolute shrinkage and selection operator,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-lasso,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-elastic net,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-least-angle regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-lars,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-classification and regression tree,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-cart,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-iterative dichotomiser 3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-id3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-c4.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-c5.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-chi-squared automatic interaction detection,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-chaid,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-decision stump,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-m5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-conditional decision trees,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-naive bayes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25
-gaussian naive bayes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-multinomial naive bayes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-averaged one-dependence estimators,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-aode,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-bayesian belief network,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-bbn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-bayesian network,0,0,0,7,0,0,0,0,23,0,0,0,0,0,0
-bn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-k-means,0,17,0,0,0,0,0,0,0,0,0,0,0,0,0
-k-medians,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-expectation maximisation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-em,0,0,0,0,0,0,3,0,4,3,0,0,0,0,0
-hierarchical clustering,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-perceptron,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-back-propagation,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0
-hopfield network,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-radial basis function network,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0
-rbfn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-deep boltzmann machine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-dbm,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
-deep belief networks,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-dbn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-convolutional neural network,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-cnn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-stacked auto-encoders,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-principal component analysis,0,0,2,0,3,0,14,0,0,0,0,0,0,0,0
-pca,0,0,21,0,4,0,26,0,0,0,0,0,0,0,0
-principal component regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-pcr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-partial least squares regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-plsr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-sammon mapping,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-multidimensional scaling,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-mds,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-projection pursuit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-linear discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-lda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-mixture discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-mda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-quadratic discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-qda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-flexible discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-fda,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0
-boosting,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-bootstrapped aggregation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-bagging,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-adaboost,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-stacked generalization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-blending,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-gradient boosting machines,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-gbm,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-gradient boosted regression trees,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-gbrt,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-random forest,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,PDF[1],PDF[2],PDF[3],PDF[4],PDF[5],PDF[6],PDF[7],PDF[8],PDF[9],PDF[10],PDF[11],PDF[12],PDF[13],PDF[14],PDF[15],PDF[16],PDF[17],PDF[18],PDF[19]
+ordinary least squares regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+olsr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+linear regression,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0
+logistic regression,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+stepwise regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+multivariate adaptive regression spline,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mars,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+locally estimated scatterplot smoothing,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+loess,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+k-nearest neighbor,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0
+knn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,0
+learning vector quantization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lvq,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+self-organizing map,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+som,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0
+locally weighted learning,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lwl ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ridge regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+least absolute shrinkage and selection operator,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lasso,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+elastic net,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+least-angle regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lars,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+classification and regression tree,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+cart,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+iterative dichotomiser ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+id3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+c4.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+c5.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+chi-squared automatic interaction detection,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+chaid,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+decision stump,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+m5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+conditional decision tree ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+naive bayes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,0
+gaussian naive bayes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+multinomial naive bayes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+averaged one-dependence estimator,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+aode,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bayesian belief network,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bbn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bayesian network,0,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,23,0
+bn ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+k-means,0,0,14,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+k-medians,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+expectation maximisation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+em,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,3,0,4,0
+hierarchical clustering ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+perceptron,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+back-propagation,0,0,0,0,2,0,0,0,0,2,0,4,0,0,0,0,0,0,0
+hopfield network,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+radial basis function network,0,0,0,0,0,0,0,0,0,5,0,2,0,0,0,0,0,0,0
+neural network,1,0,3,6,17,0,2,4,10,69,0,77,10,0,0,10,34,20,4
+deep boltzmann machine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+dbm,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0
+deep belief network,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+dbn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+convolutional neural network,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+cnn,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stacked auto-encoders ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+principal component analysis,0,0,0,0,0,0,0,0,0,0,14,1,0,0,0,0,2,0,3
+pca,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,21,0,4
+principal component regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pcr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+partial least squares regression,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+plsr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sammon mapping,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+multidimensional scaling,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mds,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+projection pursuit,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+linear discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mixture discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+quadratic discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+qda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+flexible discriminant analysis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+fda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0
+boosting,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bootstrapped aggregation,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bagging,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+adaboost,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stacked generalization,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+blending,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+gradient boosting machine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+gbm,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+gradient boosted regression tree,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+gbrt,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+random forest,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

@@ -284,9 +284,9 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
 
 # --------------------------------[DO THE WORK]--------------------------------
 # this pass all the PDF needed to analyze
-pdf_list = pdf_bank()
+pdf_full_path, short_of_pdf = pdf_storage()
 frequency_list_of_all = []
-for pdf in pdf_list:
+for pdf in pdf_full_path:
     # PDF Extraction as string and remove unwanted char
     pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
                                     char_filter=True)
@@ -300,7 +300,7 @@ for pdf in pdf_list:
     frequency_list_of_all.append([int(round(f / pdf_full_len * 10000)) for f in frequency_list])
 # create a data frame to contain all of the data, gt ready for saving to csv in a format suitable for clustering
 data = np.array(frequency_list_of_all)
-table = pd.DataFrame(data=data.T, index=keyword_list, columns=pdf_list)
+table = pd.DataFrame(data=data.T, index=keyword_list, columns=short_of_pdf)
 # print(table.head())
 # save to csv
 table.to_csv('Table_of_all.csv')
@@ -343,5 +343,9 @@ table.to_csv('Table_of_all.csv')
 #
 # StatusRecords[26 Jan]
 # -> lemmatize the glossary also bfore counting !! [replace with manual lemmatize 29 Jan]
+#
+# StatusRecords[29 Jan]
+# -> percentage table looks good, but recommendation will be to stop counting after 'reference' keywords so
+#    the counting is not affected by the references in a paper.
 
 

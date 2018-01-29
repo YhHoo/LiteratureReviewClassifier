@@ -34,13 +34,8 @@ def kmean_clustering():
     print('Labels=\n', labels)
 
     # -----[GROUPING PDF]-----
-    pdf_list = []
+    pdf_list = [pdf for pdf in df.columns]
     index_by_group = []
-    # take all pdf names and append into a list
-    for col in df:
-        # ignore the first term 'glossary'
-        if col.endswith('.pdf'):
-            pdf_list.append(col[62:])
     # convert labels from np.array to list
     labels = list(labels)
     # group the index of element of the same cluster into a same list
@@ -102,7 +97,7 @@ def direct_classification(plot=False):
     f_array = np.array(f_array)
 
     # -------[CONCLUSION INTO DATAFRAME]--------
-    column_label = [string[62:] for string in list(result_df.columns.values)]
+    column_label = [pdf for pdf in result_df.columns]
     row_label = list(cat_glossary_df)
     percentage_table_df = pd.DataFrame(data=f_array.T, columns=column_label, index=row_label)
     # adding a last column of summing across rows
