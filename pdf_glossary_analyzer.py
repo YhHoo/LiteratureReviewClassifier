@@ -23,9 +23,9 @@ from os import listdir
 from os.path import isfile, join
 # my own library
 from word_counter_utils import sort_from_highest, ProgressBarForLoop
-from pdf_bank import pdf_bank
 
 
+# this is to replace the pdf_bank()
 def pdf_storage():
     # this is the path of folder where mendeley used to contains pdf with filenames
     path_mendeley = 'C://Users//YH//AppData//Local//Mendeley Ltd//Mendeley Desktop//Downloaded//'

@@ -1,3 +1,4 @@
+# -------------[DEPRECATED: Replaced with pdf_storage()]----------------------
 # this py file will contain the file names of all pdf to be analyzed
 # as well as the location in everywhere inside the PC
 # best things is, it do all the messy pointing job and leave the main
