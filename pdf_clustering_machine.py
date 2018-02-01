@@ -64,7 +64,7 @@ def kmean_clustering():
 
 # this function is used in direct_classification() that take the percentage_table_df and find the correlation
 # between the features through the data sets_analyzed by the pdf_glossary_analyzer.py
-def correlation_matrix(df_input, lo_bound=40, hi_bound=60, save_csv=True, return_df=False):
+def connection_matrix(df_input, lo_bound=40, hi_bound=60, save_csv=True, return_df=False):
     df_percentage = df_input
     df_percentage = df_percentage.drop('ROW_SUM', axis=1)
     df_transpose = df_percentage.transpose()
@@ -108,8 +108,8 @@ def correlation_matrix(df_input, lo_bound=40, hi_bound=60, save_csv=True, return
 
     # saving
     if save_csv:
-        df_corr.to_csv('Table_of_correlation.csv')
-        print('[Table_of_correlation.csv] saving completed !')
+        df_corr.to_csv('Table_of_connection.csv')
+        print('[Table_of_connection.csv] saving completed !')
 
     # return df of correlation
     if return_df:
@@ -165,10 +165,10 @@ def direct_classification(plot=False, corr_mat=False):
 
     # -------[CORRELATION MATRIX IN CSV]-----------
     if corr_mat:
-        correlation_matrix(df_input=percentage_table_df,
-                           lo_bound=40,
-                           hi_bound=60,
-                           save_csv=True)
+        connection_matrix(df_input=percentage_table_df,
+                          lo_bound=40,
+                          hi_bound=60,
+                          save_csv=True)
 
     # -------[VISUALIZATION]--------
     if plot:

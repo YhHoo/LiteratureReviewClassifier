@@ -3,6 +3,10 @@
 # convert the pdf as string and remove those unwanted char
 # then do the counting and sorting to produce a spectrum of
 # ML glossaries and frequencies
+# (OR)
+# if given 'ml_glossary_all2.csv' which is glossary by categories, then it will first put the keywords
+# into a long list as above as well. The categorization of keywords was done in pdf_clustering_machine.py
+#
 # imported files: words_counter_utils.py + ml_glossary_all.txt (or) ml_glossary_all2.csv
 # it will then do the analysis for every pdf inside pdf_bank() and save their overall statistic
 # to Table_of_glossary_frequency.csv and get ready for pdf_clustering_machine.py
@@ -26,6 +30,8 @@ from word_counter_utils import sort_from_highest, ProgressBarForLoop
 
 
 # this is to replace the pdf_bank()
+# it will directly access all pdf inside the folder of Mendeley
+# so place all papers without renaming into the mendeley then they will be accessed through here
 def pdf_storage():
     # this is the path of folder where mendeley used to contains pdf with filenames
     path_mendeley = 'C://Users//YH//AppData//Local//Mendeley Ltd//Mendeley Desktop//Downloaded//'
@@ -205,12 +211,12 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
     # setting words to count
     database = []
     # check glossary file format (.csv or .txt)
-    if glossary_filename.endswith('.txt'):
+    if glossary_filename.endswith('.txt'):  # for ml_glossary+all.txt
         with open(glossary_filename, 'r') as f:
             for word in f:
                 database.append(word.rstrip())  # discharge the '\n'
     elif glossary_filename.endswith('.csv'):
-        # this is for glossary in the form of Categorical CSV
+        # this is for glossary in the form of Categorical CSV, == ml_glossary_all2.csv
         df = pd.read_csv(glossary_filename)
         for col in df:
             temp = df[col].dropna().tolist()
