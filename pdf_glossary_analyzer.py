@@ -8,8 +8,11 @@
 # into a long list as above as well. The categorization of keywords was done in pdf_clustering_machine.py
 #
 # imported files: words_counter_utils.py + ml_glossary_all.txt (or) ml_glossary_all2.csv
-# it will then do the analysis for every pdf inside pdf_bank() and save their overall statistic
+# it will then do the analysis for every pdf inside pdf_storage() and save their overall statistic
 # to Table_of_glossary_frequency.csv and get ready for pdf_clustering_machine.py
+# [PDF DATABASE] - Please make sure all of your pdf-s to be analyzed are downloaded by Mendeley Desktop
+# saved and properly renamed at C:\Users\YH\AppData\Local\Mendeley Ltd\Mendeley Desktop\Downloaded.
+# Follow the tutorial at Evernote
 
 from nltk.stem import WordNetLemmatizer
 import numpy as np
@@ -336,7 +339,7 @@ table.to_csv('Table_of_glossary_frequency.csv')
 # -> 99% accuracy except the words with like mode, modes are not counted as same thing
 #
 # StatusRecords[8 Jan, 2pm]
-# -> using nltk.lemmatizer to solve plural nouns, like 'statistics' -> 'stati stic'
+# -> using nltk.lemmatizer to solve plural nouns, like 'statistics' -> 'statistic'
 #
 # StatusRecords[11 Jan, 11am]
 # -> adding dataframe bfore heatmap
@@ -353,5 +356,7 @@ table.to_csv('Table_of_glossary_frequency.csv')
 # StatusRecords[29 Jan]
 # -> percentage table looks good, but recommendation will be to stop counting after 'reference' keywords so
 #    the counting is not affected by the references in a paper.
+# -> Recommend add NRW checker to check for existance of some words like NRW, leakage and so on. use oly those
+#    hit pdf to generate the connection.
 
 

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17997a68-1c85-4d35-9082-1bfbb69289ee" name="Default" comment="Before making big changes" />
+    <list default="true" id="17997a68-1c85-4d35-9082-1bfbb69289ee" name="Default" comment="Before making big changes">
+      <change beforePath="$PROJECT_DIR$/pdf_clustering_machine.py" afterPath="$PROJECT_DIR$/pdf_clustering_machine.py" />
+      <change beforePath="$PROJECT_DIR$/pdf_glossary_analyzer.py" afterPath="$PROJECT_DIR$/pdf_glossary_analyzer.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +22,7 @@
       <file leaf-file-name="pdf_bank.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pdf_bank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="210">
               <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
@@ -29,9 +32,11 @@
       <file leaf-file-name="pdf_glossary_analyzer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-546">
-              <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-              <folding />
+            <state relative-caret-position="4409">
+              <caret line="357" column="50" lean-forward="false" selection-start-line="357" selection-start-column="50" selection-end-line="357" selection-end-column="50" />
+              <folding>
+                <element signature="e#1038#1077#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,8 +44,8 @@
       <file leaf-file-name="pdf_clustering_machine.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pdf_clustering_machine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="175" column="48" lean-forward="true" selection-start-line="175" selection-start-column="48" selection-end-line="175" selection-end-column="48" />
+            <state relative-caret-position="629">
+              <caret line="113" column="41" lean-forward="false" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
               <folding>
                 <element signature="e#429#447#0" expanded="true" />
               </folding>
@@ -432,7 +437,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3402">
           <caret line="172" column="76" lean-forward="true" selection-start-line="172" selection-start-column="76" selection-end-line="172" selection-end-column="76" />
-          <folding />
+          <folding>
+            <element signature="e#1038#1077#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -441,7 +448,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="e#1038#1077#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -457,7 +466,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2289">
           <caret line="109" column="81" lean-forward="false" selection-start-line="109" selection-start-column="81" selection-end-line="109" selection-end-column="81" />
-          <folding />
+          <folding>
+            <element signature="e#1038#1077#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -480,7 +491,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2520">
           <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1038#1077#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -605,26 +618,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-546">
-          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pdf_bank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="210">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pdf_glossary_analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4409">
+          <caret line="357" column="50" lean-forward="false" selection-start-line="357" selection-start-column="50" selection-end-line="357" selection-end-column="50" />
+          <folding>
+            <element signature="e#1038#1077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pdf_clustering_machine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="175" column="48" lean-forward="true" selection-start-line="175" selection-start-column="48" selection-end-line="175" selection-end-column="48" />
+        <state relative-caret-position="629">
+          <caret line="113" column="41" lean-forward="false" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
           <folding>
             <element signature="e#429#447#0" expanded="true" />
           </folding>

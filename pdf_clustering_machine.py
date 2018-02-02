@@ -110,6 +110,8 @@ def connection_matrix(df_input, lo_bound=40, hi_bound=60, save_csv=True, return_
     if save_csv:
         df_corr.to_csv('Table_of_connection.csv')
         print('[Table_of_connection.csv] saving completed !')
+    # [SCORE EXPLAIN] - it can range from 0 to any +ve no. it is a sum of ratios of (small% / big%),we can
+    # also think the score as average no. of papers have used these kind of connection
 
     # return df of correlation
     if return_df:
@@ -162,6 +164,7 @@ def direct_classification(plot=False, corr_mat=False):
     # saving to csv
     percentage_table_df.to_csv('Table_of_percentage_categories.csv')
     print('[Table_of_percentage_categories.csv] saving completed !')
+    # [SCORE EXPLAIN] - The score means the average no.of papers that have used this specific method
 
     # -------[CORRELATION MATRIX IN CSV]-----------
     if corr_mat:
@@ -176,7 +179,7 @@ def direct_classification(plot=False, corr_mat=False):
                                  use_index=True,
                                  kind='barh',
                                  grid=True,
-                                 title='Machine Learning Methodology Heatmap')
+                                 title='Heatmap of Machine Learning Methodology')
         plt.show()
 
 
