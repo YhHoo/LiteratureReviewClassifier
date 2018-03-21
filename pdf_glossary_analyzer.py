@@ -19,6 +19,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 # import PyPDF2
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.pdfparser import PDFSyntaxError
 from pdfminer.pdfpage import PDFPage
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
@@ -87,7 +88,7 @@ def glossary_database_accumulate():
 
 # Pdf Miner that extract .pdf as string, remove all unwanted char and returned
 def pdf_to_text_pdfminer(pdf_filename, char_filter=False):
-    print('\nConverting \'{}\' to text...'.format(pdf_filename), end='')  # use end to continue printing
+    print('Converting \'{}\' to text...'.format(pdf_filename), end='')  # use end to continue printing
     pdf_filename = pdf_filename
     # PDFMiner boilerplate
     rsrcmgr = PDFResourceManager()
@@ -225,9 +226,12 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
         for col in df:
             temp = df[col].dropna().tolist()
             database += temp
-        print('DEBUGGING..', database)
     else:
         raise FileNotFoundError('[YH] ONLY USE (.csv) OR (.txt) AS glossary_filename')
+
+    # modify the global variable database_len for error handling purpose
+    global database_len
+    database_len = len(database)
 
     # create another list of '0' as int with the same length as database
     frequency = [0] * len(database)
@@ -274,7 +278,7 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
     spectrum = dict(zip(database, frequency))  # dict
     # sort from highest frequency to lowest, returned in list of tuples
     f_sorted_spectrum = sort_from_highest(spectrum)  # list of tuples
-    print('SORTED SPECTRUM: ', f_sorted_spectrum)
+    print('SORTED SPECTRUM: ', f_sorted_spectrum[:5])
 
     # visualize [configure the Bar Chart & Saving setting HERE]
     if visualize:
@@ -293,32 +297,42 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
 
 
 # --------------------------------[DO THE WORK]--------------------------------
-# this pass all the PDF needed to analyze
-pdf_full_path, short_of_pdf = pdf_storage()
-frequency_list_of_all = []
-for pdf in pdf_full_path:
-    # this error handling is to prevent the program terminate when one file out of many failed to be opened.
-    try:
-        # PDF Extraction as string and remove unwanted char
-        pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
-                                        char_filter=True)
-        # do the counting for specific phrase
-        keyword_list, frequency_list, pdf_full_len = glossary_counter_method_2(glossary_filename='ml_glossary_all2.csv',
-                                                                               pdf_string=pdf_text,
-                                                                               visualize=False,
-                                                                               bar_chart_title=pdf,
-                                                                               save_csv=False)
-        # append all f list in to a bigger list, b4 that, NORMALIZE each of the f respect to own pdf total len
-        frequency_list_of_all.append([int(round(f / pdf_full_len * 10000)) for f in frequency_list])
-    except OSError:
-        print('ERROR: CANT OPEN FILE !')
-        continue
-# create a data frame to contain all of the data, gt ready for saving to csv in a format suitable for clustering
-data = np.array(frequency_list_of_all)
-table = pd.DataFrame(data=data.T, index=keyword_list, columns=short_of_pdf)
-# print(table.head())
-# save to csv
-table.to_csv('Table_of_glossary_frequency.csv')
+# this is to prevent the code fr here onwards is executed when
+# this file is imported as a module
+if __name__ == '__main__':
+    # this pass all the PDF needed to analyze
+    pdf_full_path, short_of_pdf = pdf_storage()
+    frequency_list_of_all = []
+    database_len = 0
+    for pdf in pdf_full_path:
+        print('[{}/{}]'.format(pdf_full_path.index(pdf) + 1, len(pdf_full_path)))
+        # this error handling is to prevent the program terminate when one file out of many failed to be opened.
+        try:
+            # PDF Extraction as string and remove unwanted char
+            pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
+                                            char_filter=True)
+            # do the counting for specific phrase
+            keyword_list, frequency_list, pdf_full_len = \
+                glossary_counter_method_2(glossary_filename='ml_glossary_all2.csv',
+                                          pdf_string=pdf_text,
+                                          visualize=False,
+                                          bar_chart_title=pdf,
+                                          save_csv=False)
+            # append all f list in to a bigger list, b4 that, NORMALIZE each of the f respect to own pdf total len
+            frequency_list_of_all.append([int(round(f / pdf_full_len * 10000)) for f in frequency_list])
+        except (PDFSyntaxError, OSError):
+            print('[ERROR: CANT OPEN FILE !]')
+            frequency_list_of_all.append(['x'] * database_len)
+            continue
+        except TypeError:
+            print('[ERROR: UNSUPPORTED OPERAND]')
+            frequency_list_of_all.append(['x'] * database_len)
+            continue
+    # create a data frame to contain all of the data, gt ready for saving to csv in a format suitable for clustering
+    data = np.array(frequency_list_of_all)
+    table = pd.DataFrame(data=data.T, index=keyword_list, columns=short_of_pdf)
+    # save to csv
+    table.to_csv('Table_of_glossary_frequency.csv')
 
 
 # -------------------------------[LOG RECORDS]---------------------------------

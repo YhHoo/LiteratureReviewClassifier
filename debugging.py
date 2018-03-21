@@ -37,51 +37,95 @@
 # df = pd.DataFrame(data=l, index=index)
 # df.to_csv('LRC_citation.csv')
 
+# ----------------------------------------------------------------------
 import pandas as pd
 import numpy as np
-
-df_percentage = pd.read_csv('percentage_table_of_categories.csv', index_col=0)
-df_percentage = df_percentage.drop('ROW_SUM', axis=1)
-df_transpose = df_percentage.transpose()
-
-# set the upper and lower bound as significant range
-lower_bound = 40
-upper_bound = 60
-
-# create a square matrix of zero to contain the corr
-features = len(df_transpose.columns)
-data = np.zeros((features, features))
-labels = [feature for feature in df_transpose.columns]
-df_corr = pd.DataFrame(data=data, columns=labels, index=labels)
-
-# progress thru all columns of features, taking it as centre
-for col in df_transpose:
-    # get all row values in [col] into a list
-    vector_main = df_transpose[col].tolist()
-    # initialize nex col no
-    nex_col_no = df_transpose.columns.get_loc(col) + 1
-    # do this for the rest of the columns on the right
-    while nex_col_no < len(df_transpose.columns):
-        # ----[CORRELATION FUNCTION]----
-        # initialize corr_score
-        corr_score = 0
-        # do this for all rows under [nex_col_no]
-        for row_no in range(len(df_transpose.index)):
-            a = df_transpose.iloc[row_no, nex_col_no]
-            b = vector_main[row_no]
-            num = min(a, b)
-            den = max(a, b)
-            # significance test for percentages
-            if num >= lower_bound and den <= upper_bound:
-                corr_score += (num / den)
-
-        # ----[UPDATE CORR MATRIX WITH corr_score]----
-        # update to the corr_score_matrix in df_corr, *hint: [row index][column index]
-        df_corr.iloc[df_transpose.columns.get_loc(col), nex_col_no] = corr_score
-        # increment the nex_col_no until it reaches the last column
-        nex_col_no += 1
-
-df_corr.to_csv('debugging_v1_result.csv')
+#
+# df_percentage = pd.read_csv('percentage_table_of_categories.csv', index_col=0)
+# df_percentage = df_percentage.drop('ROW_SUM', axis=1)
+# df_transpose = df_percentage.transpose()
+#
+# # set the upper and lower bound as significant range
+# lower_bound = 40
+# upper_bound = 60
+#
+# # create a square matrix of zero to contain the corr
+# features = len(df_transpose.columns)
+# data = np.zeros((features, features))
+# labels = [feature for feature in df_transpose.columns]
+# df_corr = pd.DataFrame(data=data, columns=labels, index=labels)
+#
+# # progress thru all columns of features, taking it as centre
+# for col in df_transpose:
+#     # get all row values in [col] into a list
+#     vector_main = df_transpose[col].tolist()
+#     # initialize nex col no
+#     nex_col_no = df_transpose.columns.get_loc(col) + 1
+#     # do this for the rest of the columns on the right
+#     while nex_col_no < len(df_transpose.columns):
+#         # ----[CORRELATION FUNCTION]----
+#         # initialize corr_score
+#         corr_score = 0
+#         # do this for all rows under [nex_col_no]
+#         for row_no in range(len(df_transpose.index)):
+#             a = df_transpose.iloc[row_no, nex_col_no]
+#             b = vector_main[row_no]
+#             num = min(a, b)
+#             den = max(a, b)
+#             # significance test for percentages
+#             if num >= lower_bound and den <= upper_bound:
+#                 corr_score += (num / den)
+#
+#         # ----[UPDATE CORR MATRIX WITH corr_score]----
+#         # update to the corr_score_matrix in df_corr, *hint: [row index][column index]
+#         df_corr.iloc[df_transpose.columns.get_loc(col), nex_col_no] = corr_score
+#         # increment the nex_col_no until it reaches the last column
+#         nex_col_no += 1
+#
+# df_corr.to_csv('debugging_v1_result.csv')
 
 # the score is equivalent to how many of the pdf contribute to the correlation btw 2 methods
+
+# -------------------[SPECIFIC TESTING OF ONE PDF]-------------------------------
+from nltk.stem import WordNetLemmatizer
+import numpy as np
+import matplotlib.pyplot as plt
+# import PyPDF2
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.pdfparser import PDFSyntaxError
+from pdfminer.pdfpage import PDFPage
+from pdfminer.converter import TextConverter
+from pdfminer.layout import LAParams
+from io import StringIO
+import re
+import random
+import pandas as pd
+from os import listdir
+from os.path import isfile, join
+from pdf_glossary_analyzer import pdf_storage
+from pdfminer.pdfparser import PDFSyntaxError
+
+
+pdf_full_path, short_of_pdf = pdf_storage()
+frequency_list_of_all = []
+database_len = 0
+
+# ONLY change this pdf[no] according to the LRC_citation.py
+pdf_no = 38
+pdf_now = pdf_full_path[pdf_no - 1]
+# do the work
+print('[{}/{}]'.format(pdf_full_path.index(pdf_now) + 1, len(pdf_full_path)))
+with open(pdf_now, 'rb') as fp:
+    pages = PDFPage.get_pages(fp)
+    print(len(pages))
+    # for page in PDFPage.get_pages(fp):
+    #     print(len(PDF))
+    #     interpreter.process_page(page)
+
+
+# try:
+#     pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf_now,
+#                                     char_filter=True)
+# except TypeError:
+#     print('SYNTAX ERROR')
 
