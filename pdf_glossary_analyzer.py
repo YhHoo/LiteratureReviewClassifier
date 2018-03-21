@@ -37,7 +37,8 @@ from word_counter_utils import sort_from_highest, ProgressBarForLoop
 # so place all papers without renaming into the mendeley then they will be accessed through here
 def pdf_storage():
     # this is the path of folder where mendeley used to contains pdf with filenames
-    path_mendeley = 'C://Users//YH//AppData//Local//Mendeley Ltd//Mendeley Desktop//Downloaded//'
+    # path_mendeley = 'C://Users//YH//AppData//Local//Mendeley Ltd//Mendeley Desktop//Downloaded//'
+    path_mendeley = 'C://Users//YH//Desktop//New Reference Papers//New Reference Papers//'
     # listdir(path) will return a list of file path
     all_file_path = [(path_mendeley + f) for f in listdir(path_mendeley) if isfile(join(path_mendeley, f))]
     # list of all filename only
@@ -296,17 +297,22 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
 pdf_full_path, short_of_pdf = pdf_storage()
 frequency_list_of_all = []
 for pdf in pdf_full_path:
-    # PDF Extraction as string and remove unwanted char
-    pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
-                                    char_filter=True)
-    # do the counting for specific phrase
-    keyword_list, frequency_list, pdf_full_len = glossary_counter_method_2(glossary_filename='ml_glossary_all2.csv',
-                                                                           pdf_string=pdf_text,
-                                                                           visualize=False,
-                                                                           bar_chart_title=pdf,
-                                                                           save_csv=False)
-    # append all f list in to a bigger list, b4 that, NORMALIZE each of the f respect to own pdf total len
-    frequency_list_of_all.append([int(round(f / pdf_full_len * 10000)) for f in frequency_list])
+    # this error handling is to prevent the program terminate when one file out of many failed to be opened.
+    try:
+        # PDF Extraction as string and remove unwanted char
+        pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf,
+                                        char_filter=True)
+        # do the counting for specific phrase
+        keyword_list, frequency_list, pdf_full_len = glossary_counter_method_2(glossary_filename='ml_glossary_all2.csv',
+                                                                               pdf_string=pdf_text,
+                                                                               visualize=False,
+                                                                               bar_chart_title=pdf,
+                                                                               save_csv=False)
+        # append all f list in to a bigger list, b4 that, NORMALIZE each of the f respect to own pdf total len
+        frequency_list_of_all.append([int(round(f / pdf_full_len * 10000)) for f in frequency_list])
+    except OSError:
+        print('ERROR: CANT OPEN FILE !')
+        continue
 # create a data frame to contain all of the data, gt ready for saving to csv in a format suitable for clustering
 data = np.array(frequency_list_of_all)
 table = pd.DataFrame(data=data.T, index=keyword_list, columns=short_of_pdf)
