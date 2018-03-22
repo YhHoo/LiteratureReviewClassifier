@@ -303,8 +303,8 @@ if __name__ == '__main__':
     # this pass all the PDF needed to analyze
     pdf_full_path, short_of_pdf = pdf_storage()
     frequency_list_of_all = []
-    database_len = 0
-    for pdf in pdf_full_path:
+    database_len = 89  # IMPORTANT !! Please Make sure tis no always equal to no. of glossary  !!!!
+    for pdf in pdf_full_path[50:60]:
         print('[{}/{}]'.format(pdf_full_path.index(pdf) + 1, len(pdf_full_path)))
         # this error handling is to prevent the program terminate when one file out of many failed to be opened.
         try:
@@ -320,19 +320,26 @@ if __name__ == '__main__':
                                           save_csv=False)
             # append all f list in to a bigger list, b4 that, NORMALIZE each of the f respect to own pdf total len
             frequency_list_of_all.append([int(round(f / pdf_full_len * 10000)) for f in frequency_list])
+            print('Ext: {}, Int: {}'.format(len(frequency_list_of_all),
+                                            len(frequency_list_of_all[len(frequency_list_of_all) - 1])))
         except (PDFSyntaxError, OSError):
             print('[ERROR: CANT OPEN FILE !]')
             frequency_list_of_all.append(['x'] * database_len)
+            print('Ext: {}, Int: {}'.format(len(frequency_list_of_all),
+                                            len(frequency_list_of_all[len(frequency_list_of_all) - 1])))
             continue
         except TypeError:
             print('[ERROR: UNSUPPORTED OPERAND]')
             frequency_list_of_all.append(['x'] * database_len)
+            print('Ext: {}, Int: {}'.format(len(frequency_list_of_all),
+                                            len(frequency_list_of_all[len(frequency_list_of_all) - 1])))
             continue
     # create a data frame to contain all of the data, gt ready for saving to csv in a format suitable for clustering
     data = np.array(frequency_list_of_all)
-    table = pd.DataFrame(data=data.T, index=keyword_list, columns=short_of_pdf)
+    table = pd.DataFrame(data=data.T, index=keyword_list, columns=short_of_pdf[50:60])
     # save to csv
     table.to_csv('Table_of_glossary_frequency.csv')
+    print('Table_of_glossary_frequency.csv....[UPDATED]')
 
 
 # -------------------------------[LOG RECORDS]---------------------------------

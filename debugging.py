@@ -87,41 +87,27 @@ import numpy as np
 # the score is equivalent to how many of the pdf contribute to the correlation btw 2 methods
 
 # -------------------[SPECIFIC TESTING OF ONE PDF]-------------------------------
-from nltk.stem import WordNetLemmatizer
-import numpy as np
-import matplotlib.pyplot as plt
-# import PyPDF2
-from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
-from pdfminer.pdfparser import PDFSyntaxError
-from pdfminer.pdfpage import PDFPage
-from pdfminer.converter import TextConverter
-from pdfminer.layout import LAParams
-from io import StringIO
-import re
-import random
-import pandas as pd
-from os import listdir
-from os.path import isfile, join
-from pdf_glossary_analyzer import pdf_storage
-from pdfminer.pdfparser import PDFSyntaxError
+# from nltk.stem import WordNetLemmatizer
+# import numpy as np
+# import matplotlib.pyplot as plt
+# # import PyPDF2
+# from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+# from pdfminer.pdfparser import PDFSyntaxError
+# from pdfminer.pdfpage import PDFPage
+# from pdfminer.converter import TextConverter
+# from pdfminer.layout import LAParams
+# from io import StringIO
+# import re
+# import random
+# import pandas as pd
+# from os import listdir
+# from os.path import isfile, join
+# from pdf_glossary_analyzer import pdf_storage
+# from pdfminer.pdfparser import PDFSyntaxError
 
 
-pdf_full_path, short_of_pdf = pdf_storage()
-frequency_list_of_all = []
-database_len = 0
-
-# ONLY change this pdf[no] according to the LRC_citation.py
-pdf_no = 38
-pdf_now = pdf_full_path[pdf_no - 1]
-# do the work
-print('[{}/{}]'.format(pdf_full_path.index(pdf_now) + 1, len(pdf_full_path)))
-with open(pdf_now, 'rb') as fp:
-    pages = PDFPage.get_pages(fp)
-    print(len(pages))
-    # for page in PDFPage.get_pages(fp):
-    #     print(len(PDF))
-    #     interpreter.process_page(page)
-
+l = [[1, 2], [3, 4, 4], [5, 6, 7, 8]]
+print(len(l[len(l) - 1]))
 
 # try:
 #     pdf_text = pdf_to_text_pdfminer(pdf_filename=pdf_now,
