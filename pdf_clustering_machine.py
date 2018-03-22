@@ -121,6 +121,11 @@ def connection_matrix(df_input, lo_bound=40, hi_bound=60, save_csv=True, return_
 def direct_classification(plot=False, corr_mat=False):
     # --------------[DATA GRABBING]----------------
     result_df = pd.read_csv('Table_of_glossary_frequency.csv', index_col=0)
+    # Checker to eliminate column with 'x'
+    for col in result_df:
+        if result_df[col][0] == 'x':
+            result_df.drop([col], axis=1, inplace=True)
+    # grab the glossary categories
     cat_glossary_df = pd.read_csv('ml_glossary_all2.csv')
     f_array = []
     # for every pdf column in Table_of_glossary_frequency.csv..
