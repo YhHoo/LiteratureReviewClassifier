@@ -41,7 +41,7 @@ def pdf_storage():
     # path_mendeley = 'C://Users//YH//AppData//Local//Mendeley Ltd//Mendeley Desktop//Downloaded//'
     path_mendeley = 'C://Users//YH//Desktop//New Reference Papers//New Reference Papers//'
     # listdir(path) will return a list of file in location specified by path
-    all_file_path = [(path_mendeley + f) for f in listdir(path_mendeley) if isfile(join(path_mendeley, f))]
+    all_file_path = [(path_mendeley + f) for f in listdir(path_mendeley)]
     # list of all filename only
     all_filename = [full_path[(len(path_mendeley)):] for full_path in all_file_path]
 
