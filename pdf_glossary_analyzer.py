@@ -40,10 +40,10 @@ def pdf_storage():
     # this is the path of folder where mendeley used to contains pdf with filenames
     # path_mendeley = 'C://Users//YH//AppData//Local//Mendeley Ltd//Mendeley Desktop//Downloaded//'
     path_mendeley = 'C://Users//YH//Desktop//New Reference Papers//New Reference Papers//'
-    # listdir(path) will return a list of file path
+    # listdir(path) will return a list of file in location specified by path
     all_file_path = [(path_mendeley + f) for f in listdir(path_mendeley) if isfile(join(path_mendeley, f))]
     # list of all filename only
-    all_filename = listdir(path_mendeley)
+    all_filename = [full_path[(len(path_mendeley)):] for full_path in all_file_path]
 
     # create a df storing the short form and pdf name
     short_pdf = ['PDF[{}]'.format(i + 1) for i in range(len(all_filename))]
@@ -302,9 +302,11 @@ def glossary_counter_method_2(glossary_filename, pdf_string, visualize=False,
 if __name__ == '__main__':
     # this pass all the PDF needed to analyze
     pdf_full_path, short_of_pdf = pdf_storage()
+    print(len(short_of_pdf))
+    print(len(pdf_full_path))
     frequency_list_of_all = []
     database_len = 89  # IMPORTANT !! Please Make sure tis no always equal to no. of glossary  !!!!
-    for pdf in pdf_full_path[50:60]:
+    for pdf in pdf_full_path:
         print('[{}/{}]'.format(pdf_full_path.index(pdf) + 1, len(pdf_full_path)))
         # this error handling is to prevent the program terminate when one file out of many failed to be opened.
         try:
@@ -336,7 +338,7 @@ if __name__ == '__main__':
             continue
     # create a data frame to contain all of the data, gt ready for saving to csv in a format suitable for clustering
     data = np.array(frequency_list_of_all)
-    table = pd.DataFrame(data=data.T, index=keyword_list, columns=short_of_pdf[50:60])
+    table = pd.DataFrame(data=data.T, index=keyword_list, columns=short_of_pdf)
     # save to csv
     table.to_csv('Table_of_glossary_frequency.csv')
     print('Table_of_glossary_frequency.csv....[UPDATED]')
